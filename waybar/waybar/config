@@ -1,0 +1,42 @@
+{
+	"layer": "top",
+	"modules-left": ["river/tags"],
+	"modules-center": [],
+	"modules-right": ["custom/updates", "backlight","pulseaudio", "tray","custom/clock"],
+	"pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 5,
+		"format": "{icon} {volume}%",
+		"format-icons": {
+			"default": ["奄", "奔", "墳"]
+		}
+	},
+	"network": {
+		"tooltip": false,
+		"format-wifi": "  {essid} {ipaddr}",
+		"format-ethernet": " {ipaddr}"
+	},
+	"backlight": {
+		"tooltip": true,
+		"format": "盛 {}%",
+		"interval":2
+	},
+	"tray":{
+		"icon-size":24,
+		"show-passive-items":true,
+		"spacing": 10
+	},
+    "custom/updates": {
+        "interval": 60,
+        "return-type": "string",
+        "exec": "~/.config/waybar/modules/updates.sh",
+        "tooltip": false
+    },
+    "custom/clock": {
+        "interval": 1,
+        "return-type": "string",
+        "exec": "~/.config/waybar/modules/datetime.sh",
+        "tooltip": false
+    },
+}
+
