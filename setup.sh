@@ -143,28 +143,7 @@ sudo aura -Oj
 
 cp wall.jpg /usr/share/backgrounds/wall.jpg
 cd ~/.wayland
-##################################################################################################################
-# Added config files to ~/.config/
-##################################################################################################################
-cd ~/.wayland/.config/
-dots=$(ls -d */)
-for dot in $dots
-do
-	stow -D $dot -t ~/.config
-	stow $dot -t ~/.config
-done
-
-##################################################################################################################
-# Added config files to ~/
-##################################################################################################################
-cd ~/.wayland/.home/
-dots=$(ls -d */)
-for dot in $dots
-do
-	stow -D $dot -t ~/
-	stow $dot -t ~/
-done
-
+./config.sh
 sudo python3 -m pip install neovim
 sudo npm install neovim --global
 mkdir -p ~/.bin
