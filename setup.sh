@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 sudo pacman -S --noconfirm --needed git
+
 if ! command -v aura &> /dev/null
 then
 	sudo pacman -S --noconfirm --needed git
@@ -11,7 +12,6 @@ fi
 
 # clipboard support for xwayland apps
 sudo aura -S --noconfirm --needed xorg-xclipboard
-
 sudo aura -S --noconfirm --needed bat
 sudo aura -S --noconfirm --needed exa
 sudo aura -S --noconfirm --needed zsh
@@ -20,7 +20,7 @@ sudo aura -S --noconfirm --needed mpv
 sudo aura -S --noconfirm --needed meld
 sudo aura -S --noconfirm --needed btop
 sudo aura -S --noconfirm --needed wget
-sudo aura -Aca --noconfirmnoconfirmnsxiv
+sudo aura -Aca --noconfirm nsxiv
 sudo aura -S --noconfirm --needed tmux
 sudo aura -S --noconfirm --needed tldr
 sudo aura -S --noconfirm --needed dkms
