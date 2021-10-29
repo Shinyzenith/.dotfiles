@@ -1,0 +1,10 @@
+[user]
+	email = aakashsensharma@gmail.com
+	name = Shinyzenith
+	signingkey = aakashsensharma@gmail.com
+
+[commit]
+	gpgsign = true
+
+[tag]
+	pgpSign = true
