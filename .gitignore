@@ -1,0 +1,13 @@
+__pycache__
+playlist.m3u
+pid
+last_directory
+undodir
+plugged
+*zcompdump*
+zsh_history
+flutter
+dart
+plugins
+accounts.conf
+custom.el
