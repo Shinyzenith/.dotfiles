@@ -37,6 +37,8 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl" #R
 alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
 alias rm='rm -i'
 alias sxiv='devour sxiv'
+alias sxiv='devour nsxiv'
+alias nsxiv='devour nsxiv'
 alias udpate='sudo pacman -Syyu'
 alias upate='sudo pacman -Syyu'
 alias update='sudo pacman -Syyu'
