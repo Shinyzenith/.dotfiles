@@ -116,10 +116,8 @@ sudo aura -Aca --noconfirm libxft-bgra
 cd /tmp
 git clone https://github.com/xelphlinux/xelph-dmenu-git
 cd xelph-dmenu-git/opt/xelph-dmenu-git
-cd /tmp
-git clone https://github.com/xelphlinux/xelph-st-git
-cd xelph-st-git/opt/xelph-st-git
 sudo make clean install
+sudo aura -S --needed --noconfirm foot
 sudo aura -S --needed --noconfirm mako
 sudo aura -S --needed --noconfirm stow
 sudo aura -S --needed --noconfirm wlroots

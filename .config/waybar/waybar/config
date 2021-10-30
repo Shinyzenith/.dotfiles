@@ -2,7 +2,7 @@
 	"layer": "top",
 	"modules-left": ["river/tags"],
 	"modules-center": [],
-	"modules-right": ["custom/updates", "backlight","pulseaudio", "tray","custom/clock"],
+	"modules-right": ["custom/updates", "battery","backlight","pulseaudio", "tray","custom/clock"],
 	"pulseaudio": {
 		"tooltip": false,
 		"scroll-step": 5,
@@ -17,8 +17,13 @@
 		"format-ethernet": " {ipaddr}"
 	},
 	"backlight": {
-		"tooltip": true,
+		"tooltip": false,
 		"format": "盛 {}%",
+		"interval":1
+	},
+	"battery": {
+		"tooltip": false,
+		"format": "  {}%",
 		"interval":2
 	},
 	"tray":{
