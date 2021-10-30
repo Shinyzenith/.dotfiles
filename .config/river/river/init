@@ -6,7 +6,7 @@
 mod="Mod4"
 
 # Mod+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
-riverctl map normal $mod Return spawn st
+riverctl map normal $mod Return spawn foot
 
 # open rofi
 riverctl map normal $mod D spawn "dmenu_run -h 35 -i"
@@ -18,10 +18,10 @@ riverctl map normal $mod W spawn "brave"
 riverctl map normal $mod B spawn "killall -SIGUSR1 waybar"
 
 # Open Pulsemixer in terminal, might siwtch to foot terminal soon
-riverctl map normal $mod V spawn "st -e pulsemixer"
+riverctl map normal $mod V spawn "foot -e pulsemixer"
 
 # Open mocp in terminal , might switch to foot terminal soon
-riverctl map normal $mod M spawn "st -e mocp"
+riverctl map normal $mod M spawn "foot -e mocp"
 
 # Reload river configuration
 riverctl map normal $mod+Shift R spawn "~/.config/river/init"
