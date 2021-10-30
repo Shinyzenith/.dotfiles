@@ -13,7 +13,7 @@ fi
 if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
 fi
-export PROMPT="%F{051}%~"$'\n'" ❯ %f"
+export PROMPT="%F{078}%~"$'\n'" ❯ %f"
 autoload -U promptinit; promptinit
 autoload -U colors && colors
 export PWD=/home/$USER
