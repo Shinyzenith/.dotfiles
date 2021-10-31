@@ -158,4 +158,3 @@ sudo echo "Inherits=macOSBigSur" >> /usr/share/icons/default/index.theme
 sudo chown root /usr/share/icons/default/index.theme
 
 #TODO: setup dmenu alternative, possibly rofi ( yikes )
-#TODO: switch to the foot terminal?
