@@ -1,9 +1,8 @@
-/* TODO: fix the color scheme */
 * {
 	border: none;
 	border-radius: 0;
-	font-family: JetBrainsMono Nerd Font;
-	font-size: 14px;
+	font-family: JetBrains Mono;
+	font-size: 15px;
 	min-height: 24px;
 }
 
@@ -29,33 +28,33 @@ window#waybar.hidden {
 	margin-left: 12px;
 	margin-bottom: 0px;
 	border-radius: 15px;
-	background: #1E0432;
+	background: #5E81AC;
 	transition: none;
 }
 
 #tags button {
 	transition: none;
-	color: #ffffff;
+	color: #2E3440;
 	background: transparent;
 	font-size: 16px;
 }
 
 #tags button.occupied {
 	transition: none;
-	color: #6A3D75;
+	color: #EBCB8B;
 	background: transparent;
 	font-size: 16px;
 }
 
 #tags button.focused {
-	color: #F54652;
+	color: #ECEFF4;
 }
 
 #tags button:hover {
 	transition: none;
 	box-shadow: inherit;
 	text-shadow: inherit;
-	color: #ff79c6;
+	color: #8FBCBB;
 }
 
 #network {
@@ -78,8 +77,8 @@ window#waybar.hidden {
 	margin-bottom: 0px;
 	border-radius: 15px;
 	transition: none;
-	color: #ffffff;
-	background: #731E2A;
+	color: #2E3440;
+	background: #B48EAD;
 }
 
 #battery {
@@ -90,9 +89,32 @@ window#waybar.hidden {
 	margin-bottom: 0px;
 	border-radius: 15px;
 	transition: none;
-	color: #ffffff;
-	background: #A4333E;
+	color: #2E3440;
+	background: #EBCB8B;
 }
+
+#battery.charging, #battery.plugged {
+	color: #2E3440;
+    background-color: #A3BE8C;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #D8DEE9;
+    color: #2E3440;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: #BF616A;
+        color: #D8DEE9;
+    }
+}
+
 #temperature {
 	margin-top: 8px;
 	margin-left: 8px;
@@ -113,8 +135,8 @@ window#waybar.hidden {
 	margin-bottom: 0px;
 	border-radius: 15px;
 	transition: none;
-	color: #ffffff;
-	background: #6A3D75;
+	color: #2E3440;
+	background: #D08770;
 }
 #custom-clock {
 	margin-top: 8px;
@@ -125,8 +147,8 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 15px;
 	transition: none;
-	color: #f8f8f2;
-	background: #0D040A;
+	color: #D8DEE9;
+	background: #4C566A;
 }
 
 #tray {
@@ -137,8 +159,8 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 15px;
 	transition: none;
-	color: #f8f8f2;
-	background: #0D040A;
+	color: #D8DEE9;
+	background: #4C566A;
 }
 
 #custom-updates {
@@ -149,7 +171,6 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 15px;
 	transition: none;
-	color: #f8f8f2;
-	/*background: #A4333E;*/
-	background: #6A3D75;
+	color: #2E3440;
+	background: #B48EAD;
 }

@@ -7,4 +7,4 @@ pkg_updates() {
     echo " $updates updates"
   fi
 }
-echo " $(pkg_updates)"
+echo "$(pkg_updates)"

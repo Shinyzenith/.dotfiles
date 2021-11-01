@@ -99,7 +99,8 @@ sudo aura -S --noconfirm --needed imagemagick
 sudo aura -Aca --noconfirm cursor-theme-macos-big-sur
 sudo aura -Aca --noconfirm gotop-bin
 sudo aura -Aca --noconfirm moc-pulse
-sudo aura -Aca --noconfirm nerd-fonts-jetbrains-mono
+sudo aura -Aca --noconfirm nerd-fonts-complete
+sudo aura -S --noconfirm --needed ttf-jetbrains-mono
 sudo aura -Aca --noconfirm nordic-darker-theme
 sudo aura -Aca --noconfirm otf-san-francisco
 sudo aura -S --noconfirm --needed zsh-autosuggestions
@@ -118,6 +119,9 @@ git clone https://github.com/xelphlinux/xelph-dmenu-git
 cd xelph-dmenu-git/opt/xelph-dmenu-git
 sudo make clean install
 sudo aura -S --needed --noconfirm foot
+#sudo aura -S --needed --noconfirm scdoc
+#sudo aura -Aca --noconfirm kile-wl
+#sudo aura -Rns --noconfirm scdoc
 sudo aura -S --needed --noconfirm mako
 sudo aura -S --needed --noconfirm stow
 sudo aura -S --needed --noconfirm wlroots
@@ -139,8 +143,8 @@ sudo aura -S --needed --noconfirm wl-clipboard
 #cleaning up orphans
 sudo aura -Oj
 
-cp wall.jpg /usr/share/backgrounds/wall.jpg
 cd ~/.wayland
+cp ./wallpapers/* /usr/share/backgrounds/
 ./config.sh
 sudo python3 -m pip install neovim
 sudo npm install neovim --global
