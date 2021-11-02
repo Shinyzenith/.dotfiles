@@ -1,8 +1,8 @@
-dmenu alternative.
-setup foot keybinds from alacritty and remove them
+dmenu alternative. | check out wofi | bemenu? 
+port over all keybinds from dwm as much as possible
+all drivers from nyarch packages.x86_64
+setup foot keybinds from alacritty and remove alacritty
 kanshi - display setup
 kile or rivertile for master stack , monocle , fullscreen and floating.
 check out swaylock
 check out swayidle
-check out wofi
-check out oguri ? ( gif wallpaper project thingy on github )

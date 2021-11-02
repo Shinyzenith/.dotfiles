@@ -2,9 +2,11 @@
 pkg_updates() {
 	updates=$(checkupdates | wc -l)
   if [ $updates == 0 ]; then
-    echo " Fully Updated"
+    exit 0
+  elif [ $updates == 1 ]; then
+    echo " 1 Update"
   else
-    echo " $updates updates"
+    echo " $updates Updates"
   fi
 }
-echo "$(pkg_updates)"
+pkg_updates

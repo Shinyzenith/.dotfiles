@@ -28,33 +28,33 @@ window#waybar.hidden {
 	margin-left: 12px;
 	margin-bottom: 0px;
 	border-radius: 15px;
-	background: #5E81AC;
+	background: #2E3440;
 	transition: none;
 }
 
 #tags button {
 	transition: none;
-	color: #2E3440;
+	color: #D8DEE9;
 	background: transparent;
 	font-size: 16px;
 }
 
 #tags button.occupied {
 	transition: none;
-	color: #EBCB8B;
+	color: #BF616A;
 	background: transparent;
 	font-size: 16px;
 }
 
 #tags button.focused {
-	color: #ECEFF4;
+	color: #5E81AC;
 }
 
 #tags button:hover {
 	transition: none;
 	box-shadow: inherit;
 	text-shadow: inherit;
-	color: #8FBCBB;
+	color: #EBCB8B;
 }
 
 #network {

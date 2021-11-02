@@ -12,10 +12,10 @@ fi
 
 # clipboard support for xwayland apps
 sudo aura -S --noconfirm --needed xorg-xclipboard
+sudo aura -S --noconfirm --needed scdoc
 sudo aura -S --noconfirm --needed bat
 sudo aura -S --noconfirm --needed exa
 sudo aura -S --noconfirm --needed zsh
-sudo aura -S --noconfirm --needed vlc
 sudo aura -S --noconfirm --needed mpv
 sudo aura -S --noconfirm --needed meld
 sudo aura -S --noconfirm --needed btop
@@ -41,7 +41,6 @@ sudo aura -S --noconfirm --needed ntfs-3g
 sudo aura -S --noconfirm --needed mlocate
 sudo aura -S --noconfirm --needed zathura
 sudo aura -S --noconfirm --needed pcmanfm
-sudo aura -S --noconfirm --needed ueberzug
 sudo aura -S --noconfirm --needed reflector
 sudo aura -S --noconfirm --needed bitwarden
 sudo aura -S --noconfirm --needed xarchiver
@@ -105,7 +104,8 @@ sudo aura -Aca --noconfirm nordic-darker-theme
 sudo aura -Aca --noconfirm otf-san-francisco
 sudo aura -S --noconfirm --needed zsh-autosuggestions
 sudo aura -S --noconfirm --needed zsh-syntax-highlighting
-sudo aura -Aca --noconfirm  brave-bin
+#sudo aura -S --noconfirm --needed librewolf
+sudo aura -S --noconfirm --needed qutebrowser
 sudo aura -Aca --noconfirm  oh-my-zsh-git
 sudo aura -Aca --noconfirm  optimus-manager
 sudo aura -Aca --noconfirm  youtube-dlp-bin
@@ -119,9 +119,7 @@ git clone https://github.com/xelphlinux/xelph-dmenu-git
 cd xelph-dmenu-git/opt/xelph-dmenu-git
 sudo make clean install
 sudo aura -S --needed --noconfirm foot
-#sudo aura -S --needed --noconfirm scdoc
 #sudo aura -Aca --noconfirm kile-wl
-#sudo aura -Rns --noconfirm scdoc
 sudo aura -S --needed --noconfirm mako
 sudo aura -S --needed --noconfirm stow
 sudo aura -S --needed --noconfirm wlroots
@@ -141,6 +139,7 @@ sudo aura -S --needed --noconfirm slurp
 sudo aura -S --needed --noconfirm wl-clipboard
 
 #cleaning up orphans
+sudo aura -Rns --noconfirm scdoc
 sudo aura -Oj
 
 cd ~/.wayland
