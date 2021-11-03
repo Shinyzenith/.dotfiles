@@ -2,7 +2,8 @@
 	"layer": "top",
 	"modules-left": ["river/tags"],
 	"modules-center": [],
-	"modules-right": ["custom/updates", "network","battery","backlight","pulseaudio", "tray","custom/clock"],
+	// add network module if you want
+	"modules-right": ["custom/updates", "battery","backlight","pulseaudio", "tray","custom/clock"],
 	"pulseaudio": {
 		"tooltip": false,
 		"scroll-step": 5,

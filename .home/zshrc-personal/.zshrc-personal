@@ -27,27 +27,22 @@ alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacma
 alias mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pacman.d/mirrorlist"
 alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/pacman.d/mirrorlist"
 alias mirrors="sudo reflector --latest 30 --number 10 --sort score --save /etc/pacman.d/mirrorlist"
-alias mpv='devour mpv'
 alias mv='mv -i'
-alias p='devour pcmanfm .'
+# find devour alternative for wayland
+alias p='pcmanfm .'
 alias pdw="pwd"
 alias q='exit'
 alias rg="rg --sort path --no-ignore --hidden" #search content with ripgrep
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl" #Recent Installed Packages
 alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
 alias rm='rm -i'
-alias sxiv='devour sxiv'
-alias sxiv='devour nsxiv'
-alias nsxiv='devour nsxiv'
 alias udpate='sudo pacman -Syyu'
 alias upate='sudo pacman -Syyu'
 alias update='sudo pacman -Syyu'
 alias updatefonts='sudo fc-cache -fv'
 alias updqte='sudo pacman -Syyu'
 alias updte='sudo pacman -Syyu'
-alias vlc='devour vlc'
 alias wget="wget -c" # continue the download
-alias zathura='devour zathura'
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # required functions
@@ -138,4 +133,6 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 bindkey -s '^o' 'rangercd\n'
 bindkey '^R' history-incremental-search-backward
+#bindkey '^k' up-history
+#bindkey '^j' down-history
 bindkey -v 

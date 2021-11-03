@@ -140,11 +140,15 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 
 # Enable dark mode.
 # Type: Bool
-config.set("colors.webpage.darkmode.enabled",True)
+# config.set("colors.webpage.darkmode.enabled",True)
+config.set("colors.webpage.preferred_color_scheme",'dark')
 
-c.fonts.statusbar='11pt "JetBrains mono"'
+c.fonts.tabs.unselected='11pt "JetBrains Mono"'
+c.fonts.tabs.selected='11pt "JetBrains Mono"'
+c.fonts.statusbar='11pt "JetBrains Mono"'
 config.bind('M','hint links spawn mpv {hint-url}')
 config.bind('Z','hint links spawn foot -e yt-dlp {hint-url}')
 config.bind('xb','config-cycle statusbar.show always never')
 config.bind('xt','config-cycle tabs.show always never')
 config.bind('xx','config-cycle statusbar.show always never;; config-cycle tabs.show always never')
+config.load_autoconfig()

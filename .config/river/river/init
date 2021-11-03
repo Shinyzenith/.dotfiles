@@ -197,5 +197,7 @@ waybar &
 bash ~/.config/river/bin/gtktheme # setting our gtk variables
 killall polkit-gnome-authentication-agent-1
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+killall nm-applet
+nm-applet --indicator &
 riverctl default-layout rivertile
 exec rivertile -view-padding 5 -outer-padding 8
