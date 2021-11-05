@@ -1,14 +1,13 @@
 #!/bin/sh
 
-# This is the example configuration file for river.
-# See the river, riverctl, and rivertile man pages for complete
+# Read the river, riverctl, and rivertile man pages.
 
 mod="Mod4"
 
-# open terminal
+# Open terminal
 riverctl map normal $mod Return spawn foot
 
-# open rofi
+# Open rofi
 riverctl map normal $mod D spawn "dmenu_run -h 35 -i"
 
 # Open browser of choice, qutebrowser
@@ -155,7 +154,6 @@ do
     # Eject the optical drive
     riverctl map $mode None XF86Eject spawn 'eject -T'
 
-    # Control pulse audio volume with pamixer (https://github.com/cdemoulins/pamixer)
     riverctl map $mode None XF86AudioRaiseVolume  spawn 'amixer set Master 5%+'
     riverctl map $mode None XF86AudioLowerVolume  spawn 'amixer set Master 5%-'
     riverctl map $mode None XF86AudioMute         spawn 'amixer -D pulse set Master 1+ toggle'
@@ -166,7 +164,7 @@ do
     riverctl map $mode None XF86AudioPrev  spawn 'playerctl previous'
     riverctl map $mode None XF86AudioNext  spawn 'playerctl next'
 	
-    # Control screen backlight brighness with light (https://github.com/haikarainen/light)
+    # You can control screen backlight brighness with light (https://github.com/haikarainen/light); but we prefer brightnessctl
     riverctl map $mode None XF86MonBrightnessUp   spawn 'brightnessctl set 5%+'
     riverctl map $mode None XF86MonBrightnessDown spawn 'brightnessctl set 5%-'
 done
@@ -186,8 +184,6 @@ riverctl float-filter-add title "popup title with spaces"
 # Set app-ids and titles of views which should use client side decorations
 riverctl csd-filter-add app-id "gedit"
 
-# Set and exec into the default layout generator, rivertile.
-# River will send the process group of the init executable SIGTERM on exit.
 killall swaybg
 swaybg -i /usr/share/backgrounds/wall.jpg &
 killall mako
@@ -199,5 +195,7 @@ killall polkit-gnome-authentication-agent-1
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 killall nm-applet
 nm-applet --indicator &
+# Set and exec into the default layout generator, rivertile.
+# River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
 exec rivertile -view-padding 5 -outer-padding 8

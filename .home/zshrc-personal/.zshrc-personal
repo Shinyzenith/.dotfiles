@@ -1,7 +1,7 @@
 #aliases
 alias cat='bat'
 alias cd..='cd ..'
-alias cleanup='sudo pacman -Rns $(pacman -Qtdq);yay -c' #Cleanup orphaned packages
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq);sudo aura -Oj' #Cleanup orphaned packages
 alias cp='cp -i'
 alias cpu="ps axch -o cmd:15,%cpu --sort=-%cpu | head"
 alias df='df -h'
@@ -22,7 +22,6 @@ alias ls='exa -lhF --color=always --icons --sort=size --group-directories-first'
 alias lst='exa -lahFT --color=always --icons --sort=size --group-directories-first'
 alias m='mocp'
 alias mem="ps axch -o cmd:15,%mem --sort=-%mem | head"
-alias merge="xrdb -merge ~/.Xresources"
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist" # update your mirrors
 alias mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pacman.d/mirrorlist"
 alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/pacman.d/mirrorlist"
@@ -36,12 +35,12 @@ alias rg="rg --sort path --no-ignore --hidden" #search content with ripgrep
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl" #Recent Installed Packages
 alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
 alias rm='rm -i'
-alias udpate='sudo pacman -Syyu'
-alias upate='sudo pacman -Syyu'
-alias update='sudo pacman -Syyu'
+alias udpate='sudo aura -Syu; sudo aura -Acakux; sudo aura -Oj'
+alias upate='sudo aura -Syu; sudo aura -Acakux; sudo aura -Oj'
+alias update='sudo aura -Syu; sudo aura -Acakux; sudo aura -Oj'
+alias updqte='sudo aura -Syu; sudo aura -Acakux; sudo aura -Oj'
+alias updte='sudo aura -Syu; sudo aura -Acakux; sudo aura -Oj'
 alias updatefonts='sudo fc-cache -fv'
-alias updqte='sudo pacman -Syyu'
-alias updte='sudo pacman -Syyu'
 alias wget="wget -c" # continue the download
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 

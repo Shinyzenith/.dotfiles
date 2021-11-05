@@ -11,7 +11,7 @@
 #   qute://help/settings.html
 
 # Change the argument to True to still load settings configured via autoconfig.yml
-config.load_autoconfig(False)
+config.load_autoconfig(True)
 
 # Which cookies to accept. With QtWebEngine, this setting also controls
 # other features with tracking capabilities similar to those of cookies;
@@ -151,4 +151,3 @@ config.bind('Z','hint links spawn foot -e yt-dlp {hint-url}')
 config.bind('xb','config-cycle statusbar.show always never')
 config.bind('xt','config-cycle tabs.show always never')
 config.bind('xx','config-cycle statusbar.show always never;; config-cycle tabs.show always never')
-config.load_autoconfig()
