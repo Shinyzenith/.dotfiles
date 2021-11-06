@@ -8,13 +8,16 @@ mod="Mod4"
 riverctl map normal $mod Return spawn foot
 
 # Open rofi
-riverctl map normal $mod D spawn "dmenu_run -h 35 -i"
+riverctl map normal $mod D spawn "rofi -show drun"
 
 # Open browser of choice, qutebrowser
 riverctl map normal $mod W spawn "qutebrowser"
 
 # kill waybar
 riverctl map normal $mod B spawn "killall -SIGUSR1 waybar"
+
+# Open emacs
+riverctl map normal $mod E spawn "emacsclient -c -a 'emacs'"
 
 # Open Pulsemixer in terminal, might siwtch to foot terminal soon
 riverctl map normal $mod V spawn "foot -e pulsemixer"
@@ -195,7 +198,9 @@ killall polkit-gnome-authentication-agent-1
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 killall nm-applet
 nm-applet --indicator &
-systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP # pipewire shtuff
+killall emacs
+emacs --daemon &
+#systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP # pipewire shtuff
 # Set and exec into the default layout generator, rivertile.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile

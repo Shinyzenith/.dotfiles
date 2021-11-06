@@ -1,4 +1,6 @@
 #EXTM3U
-#MOCSERIAL: 1024
-#EXTINF:118,/home/aakash/Music/Fly Me To The Moon - Frank Sinatra - Fingerstyle Guitar Cover by James Bartholomew [PBBbKt9-sYw].mp3
-/home/aakash/Music/Fly Me To The Moon - Frank Sinatra - Fingerstyle Guitar Cover by James Bartholomew [PBBbKt9-sYw].mp3
+#MOCSERIAL: 512
+#EXTINF:81,/home/aakash/Music/Kazuki Isogai - Neo Soul riff with Ibanez JSM100 [4eu-2t6dgX4].mp3
+/home/aakash/Music/Kazuki Isogai - Neo Soul riff with Ibanez JSM100 [4eu-2t6dgX4].mp3
+#EXTINF:102,/home/aakash/Music/Neo Soul guitar Kazuki Isogai with Ibanez AZ2204 [xI3ZBCyl6Ec].mp3
+/home/aakash/Music/Neo Soul guitar Kazuki Isogai with Ibanez AZ2204 [xI3ZBCyl6Ec].mp3

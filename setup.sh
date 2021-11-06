@@ -132,6 +132,7 @@ sudo aura -Aca --noconfirm waybar-git
 
 # OBS packages
 sudo aura -Aca --noconfirm wlrobs-hg 
+sudo aura -Aca --noconfirm rofi-lbonn-wayland-git
 sudo aura -S --needed --noconfirm pipewire
 sudo aura -S --needed --noconfirm obs-studio
 
