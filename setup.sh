@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# set zsh as default shell
+
 sudo pacman -S --noconfirm --needed git
 
 if ! command -v aura &> /dev/null

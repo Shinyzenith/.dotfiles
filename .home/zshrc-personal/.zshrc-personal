@@ -28,7 +28,7 @@ alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/p
 alias mirrors="sudo reflector --latest 30 --number 10 --sort score --save /etc/pacman.d/mirrorlist"
 alias mv='mv -i'
 # find devour alternative for wayland
-alias p='pcmanfm .'
+alias p='setsid -f pcmanfm .'
 alias pdw="pwd"
 alias q='exit'
 alias rg="rg --sort path --no-ignore --hidden" #search content with ripgrep
