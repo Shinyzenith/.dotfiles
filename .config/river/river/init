@@ -13,16 +13,16 @@ riverctl map normal $mod D spawn "rofi -show drun"
 # Open browser of choice, qutebrowser
 riverctl map normal $mod W spawn "qutebrowser"
 
-# kill waybar
+# Toggle waybar
 riverctl map normal $mod B spawn "killall -SIGUSR1 waybar"
 
 # Open emacs
 riverctl map normal $mod E spawn "emacsclient -c -a 'emacs'"
 
-# Open Pulsemixer in terminal, might siwtch to foot terminal soon
+# Open Pulsemixer in terminal
 riverctl map normal $mod V spawn "foot -e pulsemixer"
 
-# Open mocp in terminal , might switch to foot terminal soon
+# Open mocp in terminal
 riverctl map normal $mod M spawn "foot -e mocp"
 
 # Reload river configuration
@@ -166,7 +166,7 @@ do
     riverctl map $mode None XF86AudioPlay  spawn 'playerctl play-pause'
     riverctl map $mode None XF86AudioPrev  spawn 'playerctl previous'
     riverctl map $mode None XF86AudioNext  spawn 'playerctl next'
-	
+
     # You can control screen backlight brighness with light (https://github.com/haikarainen/light); but we prefer brightnessctl
     riverctl map $mode None XF86MonBrightnessUp   spawn 'brightnessctl set 5%+'
     riverctl map $mode None XF86MonBrightnessDown spawn 'brightnessctl set 5%-'
@@ -198,8 +198,8 @@ killall polkit-gnome-authentication-agent-1
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 killall nm-applet
 nm-applet --indicator &
-#killall emacs
-#emacs --daemon &
+killall emacs
+emacs --daemon &
 #systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP # pipewire shtuff
 # Set and exec into the default layout generator, rivertile.
 # River will send the process group of the init executable SIGTERM on exit.

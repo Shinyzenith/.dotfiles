@@ -1,8 +1,6 @@
 #EXTM3U
-#MOCSERIAL: 256
-#EXTINF:115,/home/aakash/Music/In The Cut - Manuel Gardner Fernandes and Tim Henson [JLCtH0KAY8Q].mp4
-/home/aakash/Music/In The Cut - Manuel Gardner Fernandes and Tim Henson [JLCtH0KAY8Q].mp4
-#EXTINF:102,/home/aakash/Music/Neo Soul guitar Kazuki Isogai with Ibanez AZ2204 [xI3ZBCyl6Ec].mp3
-/home/aakash/Music/Neo Soul guitar Kazuki Isogai with Ibanez AZ2204 [xI3ZBCyl6Ec].mp3
+#MOCSERIAL: 512
 #EXTINF:81,/home/aakash/Music/Kazuki Isogai - Neo Soul riff with Ibanez JSM100 [4eu-2t6dgX4].mp3
 /home/aakash/Music/Kazuki Isogai - Neo Soul riff with Ibanez JSM100 [4eu-2t6dgX4].mp3
+#EXTINF:102,/home/aakash/Music/Neo Soul guitar Kazuki Isogai with Ibanez AZ2204 [xI3ZBCyl6Ec].mp3
+/home/aakash/Music/Neo Soul guitar Kazuki Isogai with Ibanez AZ2204 [xI3ZBCyl6Ec].mp3

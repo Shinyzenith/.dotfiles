@@ -20,8 +20,8 @@ settings:
       aw: https://wiki.archlinux.org/index.php?search={}
       dg: https://duckduckgo.com/?q={}
       gh: https://www.github.com/search?q={}
+      pdb: https://www.protondb.com/search?q={}
       re: https://reddit.com/r/{}
       yt: https://www.youtube.com/results?search_query={}
-      pdb: https://www.protondb.com/search?q={}
   url.start_pages:
     global: https://google.com

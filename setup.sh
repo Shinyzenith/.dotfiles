@@ -12,8 +12,6 @@ then
 	makepkg -sfci --noconfirm --needed
 fi
 
-# clipboard support for xwayland apps
-sudo aura -S --noconfirm --needed xorg-xclipboard
 sudo aura -S --noconfirm --needed scdoc
 sudo aura -S --noconfirm --needed bat
 sudo aura -S --noconfirm --needed exa
@@ -42,7 +40,7 @@ sudo aura -S --noconfirm --needed openssh
 sudo aura -S --noconfirm --needed ntfs-3g
 sudo aura -S --noconfirm --needed mlocate
 sudo aura -S --noconfirm --needed zathura
-sudo aura -S --noconfirm --needed pcmanfm
+sudo aura -S --noconfirm --needed pcmanfm-gtk3
 sudo aura -S --noconfirm --needed reflector
 sudo aura -S --noconfirm --needed bitwarden
 sudo aura -S --noconfirm --needed xarchiver
@@ -123,6 +121,7 @@ git clone https://github.com/xelphlinux/xelph-dmenu-git
 cd xelph-dmenu-git/opt/xelph-dmenu-git
 sudo make clean install
 sudo aura -S --needed --noconfirm foot
+sudo aura -Aca --noconfirm rofi-lbonn-wayland-git
 #sudo aura -Aca --noconfirm kile-wl
 sudo aura -S --needed --noconfirm mako
 sudo aura -S --needed --noconfirm stow
@@ -134,7 +133,6 @@ sudo aura -Aca --noconfirm waybar-git
 
 # OBS packages
 sudo aura -Aca --noconfirm wlrobs-hg 
-sudo aura -Aca --noconfirm rofi-lbonn-wayland-git
 sudo aura -S --needed --noconfirm pipewire
 sudo aura -S --needed --noconfirm obs-studio
 
