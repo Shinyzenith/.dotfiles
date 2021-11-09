@@ -112,14 +112,9 @@ sudo aura -Aca --noconfirm  oh-my-zsh-git
 sudo aura -Aca --noconfirm  optimus-manager
 sudo aura -Aca --noconfirm  youtube-dlp-bin
 sudo aura -Aca --noconfirm papirus-icon-theme
-sudo aura -Aca --noconfirm libxft-bgra
 
 
 # wayland setup
-cd /tmp
-git clone https://github.com/xelphlinux/xelph-dmenu-git
-cd xelph-dmenu-git/opt/xelph-dmenu-git
-sudo make clean install
 sudo aura -S --needed --noconfirm foot
 sudo aura -Aca --noconfirm rofi-lbonn-wayland-git
 #sudo aura -Aca --noconfirm kile-wl
