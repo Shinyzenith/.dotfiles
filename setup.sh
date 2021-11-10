@@ -190,6 +190,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 sudo mkdir -p /usr/share/icons/default
 sudo touch /usr/share/icons/default/index.theme
 sudo chown $USER /usr/share/icons/default/index.theme
+sudo chown $USER /usr/share/backgrounds
 sudo echo "[Icon Theme]" > /usr/share/icons/default/index.theme
 sudo echo "Inherits=macOSBigSur" >> /usr/share/icons/default/index.theme
 sudo chown root /usr/share/icons/default/index.theme
