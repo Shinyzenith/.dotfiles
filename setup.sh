@@ -54,6 +54,7 @@ sudo aura -Aca --noconfirm nsxiv
 sudo aura -S --noconfirm --needed tmux
 sudo aura -S --noconfirm --needed tldr
 sudo aura -S --noconfirm --needed dkms
+sudo aura -S --noconfirm --needed gtk2
 sudo aura -S --noconfirm --needed gvfs # fs support for artix
 sudo aura -S --noconfirm --needed gvfs-mtp
 sudo aura -S --noconfirm --needed ntfs-3g
