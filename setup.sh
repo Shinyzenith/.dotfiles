@@ -5,7 +5,7 @@
 sudo sed -i "s/^$USER\(:x:$(id -u $USER)\)\(.*\)\/bin\/\w*/$USER\1\2\/bin\/zsh/g" /etc/passwd
 
 # setting sudo to work without password
-sudo sed -i "s/^.*\(%wheel\sALL=(ALL) NOPASSWD: ALL\)/\1\nDefaults \!tty_tickets/g" /etc/sudoers
+sudo sed -i "s/^.*#\(%wheel\sALL=(ALL) NOPASSWD: ALL\)/\1\nDefaults \!tty_tickets/g" /etc/sudoers
 
 # installing our package manager
 sudo pacman -S --noconfirm --needed git
@@ -153,9 +153,7 @@ sudo aura -S --needed --noconfirm mako
 sudo aura -S --needed --noconfirm stow
 sudo aura -S --needed --noconfirm wlroots
 sudo aura -S --needed --noconfirm xorg-xwayland
-cd /tmp 
-wget 'https://raw.githubusercontent.com/Shinyzenith/wayland-river-rice/master/river.pkg.tar.zst'
-sudo pacman -U river.pkg.tar.zst --noconfirm --needed
+sudo aura -Aca --noconfirm river-git
 sudo aura -Aca --noconfirm swaybg-git
 sudo aura -Aca --noconfirm waybar-git
 
