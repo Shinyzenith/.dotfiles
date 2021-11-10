@@ -164,7 +164,9 @@ sudo aura -S --needed --noconfirm mako
 sudo aura -S --needed --noconfirm stow
 sudo aura -S --needed --noconfirm wlroots
 sudo aura -S --needed --noconfirm xorg-xwayland
-sudo aura -Aca --noconfirm river-git
+cd /tmp 
+wget 'https://raw.githubusercontent.com/Shinyzenith/wayland-river-rice/master/river.pkg.tar.zst'
+sudo pacman -U river.pkg.tar.zst
 sudo aura -Aca --noconfirm swaybg-git
 sudo aura -Aca --noconfirm waybar-git
 
