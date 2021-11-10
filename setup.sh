@@ -22,23 +22,11 @@ sudo aura -S --needed --noconfirm artix-archlinux-support
 # enabling chaotic
 sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key 3056513887B78AEB
-sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' --noconfirm --needed
 
-# pacman.conf edits
-sudo sed -i "s/^.*#Color/Color\nILoveCandy/g" /etc/pacman.conf
-sudo sed -i "s/^.*#\(ParallelDownloads\).*$/\1 = 16/g" /etc/pacman.conf
-sudo sed -i "s/^.*#\[system\]$/[system]\nInclude = \/etc\/pacman.d\/mirrorlist/g" /etc/pacman.conf
-sudo sed -i "s/^.*#\[world\]$/[world]\nInclude = \/etc\/pacman.d\/mirrorlist/g" /etc/pacman.conf
-sudo sed -i "s/^.*#\[galaxy\]$/[galaxy]\nInclude = \/etc\/pacman.d\/mirrorlist/g" /etc/pacman.conf
-sudo sed -i "s/^.*#\[lib32\]$/[lib32]\nInclude = \/etc\/pacman.d\/mirrorlist/g" /etc/pacman.conf
-echo "[extra]" >> /etc/pacman.conf
-echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
-echo "[community]" >> /etc/pacman.conf
-echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
-echo "[multilib]" >> /etc/pacman.conf
-echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
-echo "[chaotic-aur]" >> /etc/pacman.conf
-echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
+cd ~/.config/wayland-river
+sudo cp pacman.conf /etc/pacman.conf
+sudo pacman -Syy
 
 # pipewire stuff
 sudo aura -S --noconfirm --needed pipewire
@@ -47,6 +35,7 @@ sudo aura -S --noconfirm --needed pipewire-pulse
 sudo aura -S --noconfirm --needed pipewire-jack
 sudo aura -S --noconfirm --needed lib32-pipewire
 sudo aura -S --noconfirm --needed lib32-pipewire-jack
+sudo pacman -Rnsdd --noconfirm pipewire-media-session
 sudo aura -S --noconfirm --needed wireplumber
 sudo aura -S --noconfirm --needed xdg-desktop-portal-wlr
 sudo aura -S --noconfirm --needed pulsemixer
@@ -134,7 +123,7 @@ sudo aura -S --noconfirm --needed python3
 sudo aura -S --noconfirm --needed ripgrep
 sudo aura -S --noconfirm --needed python-pip
 
-sudo aura -S --noconfirm --needed neofetch
+#sudo aura -S --noconfirm --needed neofetch
 sudo aura -S --noconfirm --needed zathura-ps
 sudo aura -S --noconfirm --needed imagemagick
 
@@ -153,7 +142,7 @@ sudo aura -S --noconfirm --needed network-manager-applet
 sudo aura -S --noconfirm --needed networkmanager
 sudo aura -Aca --noconfirm  oh-my-zsh-git
 sudo aura -S --noconfirm --needed yt-dlp
-sudo aura -Aca --noconfirm papirus-icon-theme
+sudo aura -S --noconfirm papirus-icon-theme
 
 
 # wayland setup
@@ -166,7 +155,7 @@ sudo aura -S --needed --noconfirm wlroots
 sudo aura -S --needed --noconfirm xorg-xwayland
 cd /tmp 
 wget 'https://raw.githubusercontent.com/Shinyzenith/wayland-river-rice/master/river.pkg.tar.zst'
-sudo pacman -U river.pkg.tar.zst
+sudo pacman -U river.pkg.tar.zst --noconfirm --needed
 sudo aura -Aca --noconfirm swaybg-git
 sudo aura -Aca --noconfirm waybar-git
 
@@ -182,14 +171,14 @@ sudo aura -S --needed --noconfirm slurp
 sudo aura -S --needed --noconfirm wl-clipboard
 
 #cleaning up orphans
-sudo aura -Rns --noconfirm scdoc
-sudo aura -Rnsdd --noconfirm xorg-server
+sudo pacman -Rns --noconfirm scdoc
+sudo pacman -Rnsdd --noconfirm xorg-server
 sudo aura -Oj --noconfirm
 
 xdg-user-dirs-update
 cd ~/.config/wayland-river
 sudo mkdir /usr/share/backgrounds
-cp ./wallpapers/* /usr/share/backgrounds/
+sudo cp ./wallpapers/* /usr/share/backgrounds/
 ./config.sh
 sudo python3 -m pip install neovim
 sudo npm install neovim --global
@@ -208,5 +197,6 @@ sudo chown root /usr/share/icons/default/index.theme
 sudo gpasswd -a $USER video
 sudo gpasswd -a $USER power
 sudo gpasswd -a $USER audio
+loginctl reboot
 
 #TODO: setup dmenu alternative, possibly rofi ( yikes )
