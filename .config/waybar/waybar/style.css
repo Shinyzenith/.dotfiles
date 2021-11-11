@@ -79,7 +79,7 @@ window#waybar.hidden {
 	border-radius: 15px;
 	transition: none;
 	color: #2E3440;
-	background: #B48EAD;
+	background: #60AFEE;
 }
 
 #battery {
@@ -175,5 +175,5 @@ window#waybar.hidden {
 	border-radius: 15px;
 	transition: none;
 	color: #2E3440;
-	background: #B48EAD;
+	background: #60AFEE;
 }
