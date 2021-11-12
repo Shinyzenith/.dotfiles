@@ -1,5 +1,4 @@
 #!/bin/sh
-
 # Read the river, riverctl, and rivertile man pages.
 
 mod="Mod4"
@@ -29,7 +28,7 @@ riverctl map normal $mod M spawn "foot -e mocp"
 riverctl map normal $mod+Shift R spawn "~/.config/river/init"
 
 # Discord canary
-riverctl map normal $mod+Shift D spawn "discord-canary"
+riverctl map normal $mod+Shift D spawn "electron --ignore-gpu-blocklist --ozone-platform=wayland --enable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --no-sandbox --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy /usr/lib/discord-canary/app.asar" # discord-canary-electron-bin from the AUR needs to be installed for this to work
 
 # Screenshot
 riverctl map normal None Print spawn 'IMG=~/Pictures/screenshots/$(date | sed "s/\s/-/g" | sed "s/--/-/g").png&&grim -g "$(slurp)" $IMG && cat $IMG | wl-copy && notify-send "Screenshot has been saved and copied to your clipboard" -a "grim" -u critical -t 2000'
@@ -157,9 +156,9 @@ do
     # Eject the optical drive
     riverctl map $mode None XF86Eject spawn 'eject -T'
 
-    riverctl map $mode None XF86AudioRaiseVolume  spawn 'amixer set Master 5%+'
-    riverctl map $mode None XF86AudioLowerVolume  spawn 'amixer set Master 5%-'
-    riverctl map $mode None XF86AudioMute         spawn 'amixer set Master toggle'
+    riverctl map $mode None XF86AudioRaiseVolume  spawn 'pactl set-sink-volume @DEFAULT_SINK@ +5%'
+    riverctl map $mode None XF86AudioLowerVolume  spawn 'pactl set-sink-volume @DEFAULT_SINK@ -5%'
+    riverctl map $mode None XF86AudioMute         spawn 'pactl set-sink-mute @DEFAULT_SINK@ toggle'
 
     # Control MPRIS aware media players with playerctl (https://github.com/altdesktop/playerctl)
     riverctl map $mode None XF86AudioMedia spawn 'playerctl play-pause'

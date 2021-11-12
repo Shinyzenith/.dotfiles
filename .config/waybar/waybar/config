@@ -3,7 +3,7 @@
 	"modules-left": ["river/tags"],
 	"modules-center": [],
 	// add network module if you want
-	"modules-right": ["custom/updates", "battery","backlight","pulseaudio", "tray","custom/clock"],
+	"modules-right": ["custom/downloads","custom/updates", "battery","backlight","pulseaudio", "tray","custom/clock"],
 	"pulseaudio": {
 		"tooltip": false,
 		"scroll-step": 5,
@@ -50,6 +50,12 @@
         "interval": 120,
         "return-type": "string",
         "exec": "~/.config/waybar/modules/updates.sh",
+        "tooltip": false
+    },
+    "custom/downloads": {
+        "interval": 600,
+        "return-type": "string",
+        "exec": "~/.config/waybar/modules/downloads.py",
         "tooltip": false
     },
     "custom/clock": {

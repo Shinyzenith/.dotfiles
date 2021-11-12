@@ -39,7 +39,6 @@ sudo pacman -Rnsdd --noconfirm pipewire-media-session
 sudo aura -S --noconfirm --needed wireplumber
 sudo aura -S --noconfirm --needed xdg-desktop-portal-wlr
 sudo aura -S --noconfirm --needed pulsemixer
-sudo aura -S --noconfirm --needed alsa-utils
 
 # base package install
 sudo aura -S --noconfirm --needed scdoc
@@ -64,6 +63,8 @@ sudo aura -S --noconfirm --needed expac
 sudo aura -S --noconfirm --needed qt5ct
 sudo aura -S --noconfirm --needed xclip
 sudo aura -S --noconfirm --needed bluez 
+sudo aura -S --noconfirm --needed bluez-runit
+sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 sudo aura -S --noconfirm --needed zenity
 sudo aura -S --noconfirm --needed man-db
 sudo aura -S --noconfirm --needed wmname
@@ -87,9 +88,8 @@ sudo aura -S --noconfirm --needed pcmanfm-gtk3
 sudo aura -S --noconfirm --needed polkit-gnome
 sudo aura -S --noconfirm --needed brightnessctl
 sudo aura -S --noconfirm --needed xdg-user-dirs
-sudo aura -S --noconfirm --needed discord-canary
+sudo aura -Aca --noconfirm discord-canary-electron-bin
 sudo aura -S --noconfirm --needed noto-fonts-emoji
-sudo aura -S --noconfirm --needed pacman-contrib
 sudo aura -S --noconfirm --needed zathura-pdf-mupdf
 sudo aura -S --noconfirm --needed archlinux-keyring
 
@@ -171,7 +171,7 @@ sudo aura -S --needed --noconfirm wl-clipboard
 
 #cleaning up orphans
 sudo pacman -Rns --noconfirm scdoc
-sudo pacman -Rnsdd --noconfirm xorg-server
+sudo pacman -Rdd --noconfirm xorg-server
 sudo aura -Oj --noconfirm
 
 xdg-user-dirs-update
@@ -180,6 +180,7 @@ sudo mkdir /usr/share/backgrounds
 sudo cp ./wallpapers/* /usr/share/backgrounds/
 ./config.sh
 sudo python3 -m pip install neovim
+sudo python3 -m pip insall beautifulsoup4
 sudo npm install neovim --global
 mkdir -p ~/.bin
 mkdir -p ~/.vim/undodir
