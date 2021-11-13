@@ -3,7 +3,7 @@
 	"modules-left": ["river/tags"],
 	"modules-center": [],
 	// add network module if you want
-	"modules-right": ["custom/downloads","custom/updates", "battery","backlight","pulseaudio", "tray","custom/clock"],
+	"modules-right": ["custom/updates","custom/downloads", "battery","backlight","pulseaudio", "tray","custom/clock"],
 	"pulseaudio": {
 		"tooltip": false,
 		"scroll-step": 5,
