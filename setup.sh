@@ -157,7 +157,6 @@ sudo aura -Aca --noconfirm swaybg-git
 sudo aura -Aca --noconfirm waybar-git
 
 # OBS packages
-sudo aura -Aca --noconfirm wlrobs-hg 
 sudo aura -S --needed --noconfirm qt5-wayland
 sudo aura -S --needed --noconfirm pipewire
 sudo aura -S --needed --noconfirm obs-studio

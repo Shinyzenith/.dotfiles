@@ -50,5 +50,5 @@ plugins=(
 	)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-[[ -f $ZDOTDIR/.zshrc-personal ]] && . $ZDOTDIR/.zshrc-personal
+[[ -f $ZDOTDIR/.zshrc-alias ]] && . $ZDOTDIR/.zshrc-alias
 precmd(){print""}
