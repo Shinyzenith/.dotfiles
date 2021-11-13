@@ -26,6 +26,7 @@ alias mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pac
 alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/pacman.d/mirrorlist"
 alias mirrors="sudo reflector --latest 30 --number 10 --sort score --save /etc/pacman.d/mirrorlist"
 alias mv='mv -i'
+alias vim='vim -i NONE'
 # find devour alternative for wayland
 alias p='setsid -f pcmanfm .'
 alias pdw="pwd"
