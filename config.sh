@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-cd ~/.config/wayland-river
+cd ~/.dotfiles
 for dir in $( find .config -maxdepth 2 -mindepth 2 | awk -F "/" '{print $NF}')
 do
 	rm -rf ~/$dir
@@ -10,7 +10,7 @@ do
 	rm -rf ~/$dir
 done
 
-cd ~/.config/wayland-river/.config/
+cd ~/.dotfiles/.config
 dots=$(ls -d */)
 for dot in $dots
 do
@@ -18,7 +18,7 @@ do
 	stow "$dot" -t ~/.config
 done
 
-cd ~/.config/wayland-river/.home/
+cd ~/.dotfiles/.home
 dots=$(ls -d */)
 for dot in $dots
 do
