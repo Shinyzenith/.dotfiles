@@ -197,12 +197,6 @@ killall polkit-gnome-authentication-agent-1
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 killall nm-applet
 nm-applet --indicator &
-killall pipewire
-pipewire &
-killall pipewire-pulse
-pipewire-pulse &
-killall pipewire-media-session
-pipewire-media-session &
 #systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP # pipewire shtuff
 # Set and exec into the default layout generator, rivertile.
 # River will send the process group of the init executable SIGTERM on exit.
