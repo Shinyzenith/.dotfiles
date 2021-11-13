@@ -31,7 +31,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 HISTSIZE=50000
 SAVEHIST=50000
-HISTFILE=~/.zsh_history
+HISTFILE=~/.cache/zsh_history
 HIST_STAMPS="dd/mm/yyyy"
 compinit
 _comp_options+=(globdots) # lets you tab complete hidden files by default
@@ -46,5 +46,5 @@ plugins=(
 	)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-[[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
+[[ -f $ZDOTDIR/.zshrc-personal ]] && . $ZDOTDIR/.zshrc-personal
 precmd(){print""}
