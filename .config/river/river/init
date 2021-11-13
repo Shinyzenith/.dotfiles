@@ -201,10 +201,11 @@ killall pipewire
 pipewire &
 killall pipewire-pulse
 pipewire-pulse &
-killall wireplumber
-wireplumber &
+killall pipewire-media-session
+pipewire-media-session &
 #systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP # pipewire shtuff
 # Set and exec into the default layout generator, rivertile.
 # River will send the process group of the init executable SIGTERM on exit.
-riverctl default-layout rivertile
-exec rivertile -view-padding 5 -outer-padding 8
+riverctl default-layout rivertile &
+exec rivertile -view-padding 5 -outer-padding 8 &
+brightnessctl set 100%

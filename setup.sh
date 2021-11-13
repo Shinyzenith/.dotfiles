@@ -35,8 +35,6 @@ sudo aura -S --noconfirm --needed pipewire-pulse
 sudo aura -S --noconfirm --needed pipewire-jack
 sudo aura -S --noconfirm --needed lib32-pipewire
 sudo aura -S --noconfirm --needed lib32-pipewire-jack
-sudo pacman -Rnsdd --noconfirm pipewire-media-session
-sudo aura -S --noconfirm --needed wireplumber
 sudo aura -S --noconfirm --needed xdg-desktop-portal-wlr
 sudo aura -S --noconfirm --needed pulsemixer
 
