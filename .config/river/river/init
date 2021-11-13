@@ -22,7 +22,7 @@ riverctl map normal $mod E spawn "emacsclient -c -a 'emacs'"
 riverctl map normal $mod V spawn "foot -e pulsemixer"
 
 # Open mocp in terminal
-riverctl map normal $mod M spawn "foot -e mocp"
+riverctl map normal $mod M spawn "foot -e mocp -M ~/.config/moc"
 
 # Reload river configuration
 riverctl map normal $mod+Shift R spawn "~/.config/river/init"
