@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 # sleep , poweroff, reboot and otehr integrations https://wiki.artixlinux.org/Main/Elogind
 
-# setting shell to zsh
+# setting shell to zsh.
 sudo sed -i "s/^$USER\(:x:$(id -u $USER)\)\(.*\)\/bin\/\w*/$USER\1\2\/bin\/zsh/g" /etc/passwd
-
-# setting sudo to work without password
-sudo sed -i "s/^.*#\(%wheel\sALL=(ALL) NOPASSWD: ALL\)/\1\nDefaults \!tty_tickets/g" /etc/sudoers
 
 # installing our package manager
 sudo pacman -S --noconfirm --needed git
