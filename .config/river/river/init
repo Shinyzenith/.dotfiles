@@ -41,7 +41,7 @@ riverctl map normal $mod BackSpace spawn 'wl-copy -c && printf ''|xclip -selecti
 riverctl map normal $mod+Shift f spawn 'dbus-launch pcmanfm' # artix specific, works on arch with just pcmanfm
 
 # PixelColor script
-riverctl map normal "Mod1" C spawn 'bash ~/.config/river/bin/pixelcolor'
+riverctl map normal "Mod1" C spawn 'bash ~/.config/bin/pixelcolor'
 
 # Pause mocp
 riverctl map normal $mod C spawn 'mocp -G'
@@ -192,7 +192,7 @@ killall mako
 mako &
 killall waybar
 waybar &
-bash ~/.config/river/bin/gtktheme # setting our gtk variables
+bash ~/.config/bin/gtktheme # setting our gtk variables
 killall polkit-gnome-authentication-agent-1
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 killall nm-applet
