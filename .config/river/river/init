@@ -43,9 +43,6 @@ riverctl map normal $mod+Shift f spawn 'dbus-launch pcmanfm' # artix specific, w
 # PixelColor script
 riverctl map normal "Mod1" C spawn 'bash ~/.config/bin/pixelcolor'
 
-# Pause mocp
-riverctl map normal $mod C spawn 'mocp -G'
-
 # Mod+Q to close the focused view
 riverctl map normal $mod Q close
 
