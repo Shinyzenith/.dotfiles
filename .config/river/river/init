@@ -199,4 +199,4 @@ nm-applet --indicator &
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile &
 exec rivertile -view-padding 5 -outer-padding 8 &
-brightnessctl set 100%
+brightnessctl set 50%
