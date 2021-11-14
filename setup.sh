@@ -144,6 +144,7 @@ sudo aura -S --noconfirm papirus-icon-theme
 # wayland setup
 sudo aura -S --needed --noconfirm foot
 sudo aura -Aca --noconfirm rofi-lbonn-wayland-git
+sudo aura -Aca --noconfirm rivercarro-git
 #sudo aura -Aca --noconfirm kile-wl
 sudo aura -S --needed --noconfirm mako
 sudo aura -S --needed --noconfirm stow
