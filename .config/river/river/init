@@ -192,5 +192,5 @@ killall nm-applet
 nm-applet --indicator &
 riverctl default-layout rivercarro &
 killall rivercarro
-exec rivercarro -view-padding 10 -outer-padding 10 -main-ratio 0.5 &
+rivercarro -view-padding 10 -outer-padding 10 -main-ratio 0.5 &
 brightnessctl set 50%

@@ -4,7 +4,8 @@ if [ -f /tmp/monoclelock ]; then
 	echo "Monocle lock file exists...proceeding to remove file and switch to tiled layout"
 	rm /tmp/monoclelock
 	killall rivercarro
-	rivercarro -view-padding 10 -outer-padding 10 -main-ratio 0.5 &
+	# getting the rivercarro command from the init file itself so that everything stays in sync across config changes
+	egrep "^rivercarro.*$" ~/.config/river/init | xargs /bin/bash -c 
 else
 	echo "Monocle lock file doesn't exist, switching to monocle mode and deleting lock file."
 	riverctl send-layout-cmd rivercarro "main-location monocle"
