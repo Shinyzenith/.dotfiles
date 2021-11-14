@@ -15,9 +15,6 @@ riverctl map normal $mod W spawn "qutebrowser"
 # Toggle waybar
 riverctl map normal $mod B spawn "killall -SIGUSR1 waybar"
 
-# Open emacs
-riverctl map normal $mod E spawn "emacsclient -c -a 'emacs'"
-
 # Open Pulsemixer in terminal
 riverctl map normal $mod V spawn "foot -e pulsemixer"
 
