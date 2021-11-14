@@ -142,7 +142,7 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 bindkey -s '^o' 'rangercd\n'
-bindkey -s '^e' 'gitpush\n'
+bindkey -s '^p' 'gitpush\n'
 bindkey '^R' history-incremental-search-backward
 #bindkey '^k' up-history
 #bindkey '^j' down-history
