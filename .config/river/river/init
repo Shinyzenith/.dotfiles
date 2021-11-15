@@ -195,4 +195,9 @@ nm-applet --indicator &
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile &
 exec rivertile -view-padding 5 -outer-padding 8 &
+for pad in $(riverctl list-inputs | grep -i touchpad )
+do
+  riverctl input $pad events enabled
+  riverctl input $pad tap enabled
+done
 brightnessctl set 50%
