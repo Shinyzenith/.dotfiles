@@ -18,9 +18,9 @@ mkdir -p /mnt/boot
 mount $bootpartition /mnt/boot
 basestrap /mnt base base-devel linux linux-firmware linux-headers grub efibootmgr networkmanager networkmanager-runit runit elogind-runit
 fstabgen -U /mnt >> /mnt/etc/fstab
-sed '1,/^#part2$/d' arch_install.sh > /mnt/arch_install2.sh
-chmod +x /mnt/arch_install2.sh
-artix-chroot /mnt ./arch_install2.sh
+sed '1,/^#part2$/d' artix_install.sh > /mnt/arch_install2.sh
+chmod +x /mnt/artix_install2.sh
+artix-chroot /mnt ./artix_install2.sh
 exit 
 
 #part2
@@ -48,15 +48,15 @@ read username
 useradd -m -G wheel -s /bin/zsh $username
 passwd $username
 echo "Pre-Installation Finished Reboot now"
-ai3_path=/home/$username/arch_install3.sh
-sed '1,/^#part3$/d' arch_install2.sh > $ai3_path
+ai3_path=/home/$username/artix_install3.sh
+sed '1,/^#part3$/d' artix_install2.sh > $ai3_path
 chown $username:$username $ai3_path
 chmod +x $ai3_path
 su -c $ai3_path -s /bin/sh $username
 exit 
 
 #part3
-sudo rm /arch_install2.sh
+sudo rm /artix_install2.sh
 cd $HOME
 # sleep , poweroff, reboot and otehr integrations https://wiki.artixlinux.org/Main/Elogind
 sudo pacman -S --noconfirm --needed git
@@ -243,6 +243,6 @@ sudo chown root /usr/share/icons/default/index.theme
 sudo gpasswd -a $USER video
 sudo gpasswd -a $USER power
 sudo gpasswd -a $USER audio
-sudo rm -rf /home/$USER/arch_install3.sh
+sudo rm -rf /home/$USER/artix_install3.sh
 loginctl reboot
 exit
