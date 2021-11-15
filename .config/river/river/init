@@ -2,6 +2,7 @@
 # Read the river, riverctl, and rivertile man pages.
 
 mod="Mod4"
+riverctl spawn "dbus-update-activation-environment SEATD_SOCK DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
 
 # Open terminal
 riverctl map normal $mod Return spawn foot
