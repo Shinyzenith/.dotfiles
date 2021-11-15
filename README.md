@@ -5,3 +5,4 @@
 
 # How to use this setup?
 Instal Artix Linux, clone this repo to `~/.dotfiles` and run `setup.sh`
+delete `export XKB_DEFAULT_OPTIONS=caps:swapescape` from `~/.zprofile` if you don't want your escape key to be swapped with your caps lock key.
