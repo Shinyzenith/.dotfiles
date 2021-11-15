@@ -1,7 +1,64 @@
 #!/usr/bin/env bash
-# sleep , poweroff, reboot and otehr integrations https://wiki.artixlinux.org/Main/Elogind
+# Haven't tested this script yet !!!!!!!!!!!!!!!!!!!!!!!!
+#part1
+echo "For UEFI installs only."
+loadkeys us
+lsblk
+echo "Enter the drive: "
+read drive
+cfdisk $drive 
+echo "Enter the linux partition: "
+read partition
+mkfs.ext4 $partition 
+echo "Enter boot partition: "
+read bootpartition
+mkfs.vfat -F 32 $efipartition
+mount $partition /mnt 
+mkdir -p /mnt/boot
+mount $bootpartition /mnt/boot
+basestrap /mnt base base-devel linux linux-firmware linux-headers grub efibootmgr networkmanager networkmanager-runit runit elogind-runit
+fstabgen -U /mnt >> /mnt/etc/fstab
+sed '1,/^#part2$/d' arch_install.sh > /mnt/arch_install2.sh
+chmod +x /mnt/arch_install2.sh
+artix-chroot /mnt ./arch_install2.sh
+exit 
 
-# installing our package manager
+#part2
+ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
+hwclock --systohc
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+locale-gen
+echo "LANG=en_US.UTF-8" > /etc/locale.conf
+echo "Hostname: "
+read hostname
+echo $hostname > /etc/hostname
+echo "127.0.0.1       localhost" >> /etc/hosts
+echo "::1             localhost" >> /etc/hosts
+echo "127.0.1.1       $hostname.localdomain $hostname" >> /etc/hosts
+passwd
+echo "Enter boot partition: " 
+read efipartition
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+grub-mkconfig -o /boot/grub/grub.cfg
+sed -i "s/^.*#\(%wheel\sALL=(ALL) NOPASSWD: ALL\)/\1\nDefaults \!tty_tickets/g" /etc/sudoers
+ln -s /etc/runit/sv/NetworkManager /etc/runit/runsvdir/current
+echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+echo "Enter Username: "
+read username
+useradd -m -G wheel -s /bin/zsh $username
+passwd $username
+echo "Pre-Installation Finished Reboot now"
+ai3_path=/home/$username/arch_install3.sh
+sed '1,/^#part3$/d' arch_install2.sh > $ai3_path
+chown $username:$username $ai3_path
+chmod +x $ai3_path
+su -c $ai3_path -s /bin/sh $username
+exit 
+
+#part3
+sudo rm /arch_install2.sh
+cd $HOME
+# sleep , poweroff, reboot and otehr integrations https://wiki.artixlinux.org/Main/Elogind
 sudo pacman -S --noconfirm --needed git
 if ! command -v aura &> /dev/null
 then
@@ -9,11 +66,8 @@ then
 	cd /tmp/aura-git-cloned/
 	makepkg -sfci --noconfirm --needed
 fi
-
-# arch linux support
+git clone https://github.com/shinyzenith/.dotfiles
 sudo aura -S --needed --noconfirm artix-archlinux-support
-
-# enabling chaotic
 sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key 3056513887B78AEB
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' --noconfirm --needed
@@ -22,7 +76,6 @@ cd ~/.dotfiles
 sudo cp ./assets/pacman.conf /etc/pacman.conf
 sudo pacman -Syy
 
-# pipewire stuff
 sudo aura -S --noconfirm --needed pipewire
 sudo aura -S --noconfirm --needed pipewire-alsa
 sudo aura -S --noconfirm --needed pipewire-pulse
@@ -190,4 +243,6 @@ sudo chown root /usr/share/icons/default/index.theme
 sudo gpasswd -a $USER video
 sudo gpasswd -a $USER power
 sudo gpasswd -a $USER audio
+sudo rm -rf /home/$USER/arch_install3.sh
 loginctl reboot
+exit
