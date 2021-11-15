@@ -9,7 +9,7 @@
 		"scroll-step": 5,
 		"format": "{icon} {volume}%",
 		"format-muted": " {volume}%",
-		"on-click":"amixer -D pulse set Master 1+ toggle",
+		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
 		"scroll-step": 1,
 		"format-icons": {
 			"default": ["奄", "奔", "墳"]
