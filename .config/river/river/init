@@ -22,6 +22,9 @@ riverctl map normal $mod V spawn "foot -e pulsemixer"
 # Open mocp in terminal
 riverctl map normal $mod M spawn "foot -e mocp -M ~/.config/moc"
 
+# logout script
+riverctl map normal $mod X spawn "~/.config/bin/logout"
+
 # Reload river configuration
 riverctl map normal $mod+Shift R spawn "~/.config/river/init"
 
