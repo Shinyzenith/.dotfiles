@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Haven't tested this script yet !!!!!!!!!!!!!!!!!!!!!!!!
+# have to update depdendency list
 #part1
 echo "For UEFI installs only."
 cd ~/.dotfiles

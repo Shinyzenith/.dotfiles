@@ -10,11 +10,8 @@ riverctl map normal $mod Return spawn foot
 # Open rofi
 riverctl map normal $mod D spawn "rofi -show drun"
 
-# Open browser of choice, qutebrowser
-riverctl map normal $mod W spawn "qutebrowser"
-
-# Open browser of choice, brave
-riverctl map normal $mod+Shift W spawn "brave --enable-features=UseOzonePlatform --ozone-platform=wayland"
+# Open browser of choice, firefox
+riverctl map normal $mod W spawn "firefox"
 
 # Toggle waybar
 riverctl map normal $mod B spawn "killall -SIGUSR1 waybar"
@@ -189,6 +186,7 @@ riverctl float-filter-add title "popup title with spaces"
 
 # Set app-ids and titles of views which should use client side decorations
 riverctl csd-filter-add app-id "gedit"
+riverctl csd-filter-remove app-id "firefox"
 
 killall swaybg
 swaybg -i /usr/share/backgrounds/wall.jpg &
