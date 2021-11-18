@@ -131,6 +131,7 @@ sudo aura -Aca --noconfirm otf-san-francisco
 sudo aura -S --noconfirm --needed zsh-autosuggestions
 sudo aura -S --noconfirm --needed zsh-syntax-highlighting
 sudo aura -S --noconfirm --needed qutebrowser
+sudo aura -S --noconfirm --needed brave
 sudo aura -S --noconfirm --needed network-manager-applet
 sudo aura -S --noconfirm --needed networkmanager
 sudo aura -Aca --noconfirm  oh-my-zsh-git

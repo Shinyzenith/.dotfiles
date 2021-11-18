@@ -13,6 +13,9 @@ riverctl map normal $mod D spawn "rofi -show drun"
 # Open browser of choice, qutebrowser
 riverctl map normal $mod W spawn "qutebrowser"
 
+# Open browser of choice, brave
+riverctl map normal $mod+Shift W spawn "brave --enable-features=UseOzonePlatform --ozone-platform=wayland"
+
 # Toggle waybar
 riverctl map normal $mod B spawn "killall -SIGUSR1 waybar"
 
