@@ -31,8 +31,11 @@ riverctl map normal $mod X spawn "~/.config/bin/logout"
 # Reload river configuration
 riverctl map normal $mod+Shift R spawn "~/.config/river/init"
 
-# Discord canary
-riverctl map normal $mod+Shift D spawn "electron --ignore-gpu-blocklist --ozone-platform=wayland --enable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --no-sandbox --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy /usr/lib/discord-canary/app.asar" # discord-canary-electron-bin from the AUR needs to be installed for this to work
+# Discord canary electron bin AUR
+# riverctl map normal $mod+Shift D spawn "electron --ignore-gpu-blocklist --ozone-platform=wayland --enable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --no-sandbox --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy /usr/lib/discord-canary/app.asar"
+
+# Discord canary community repo
+riverctl map normal $mod+Shift D spawn "discord-canary --ignore-gpu-blocklist --ozone-platform=wayland --enable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --no-sandbox --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy"
 
 # Screenshot
 riverctl map normal None Print spawn 'IMG=~/Pictures/screenshots/$(date | sed "s/\s/-/g" | sed "s/--/-/g").png&&grim -g "$(slurp)" $IMG && cat $IMG | wl-copy && notify-send "Screenshot has been saved and copied to your clipboard" -a "grim" -u critical -t 2000'
@@ -201,7 +204,7 @@ nm-applet --indicator &
 # Set and exec into the default layout generator, rivertile.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile &
-exec rivertile -view-padding 5 -outer-padding 8 &
+exec rivertile -main-ratio 0.5 -view-padding 5 -outer-padding 8 &
 for pad in $(riverctl list-inputs | grep -i touchpad )
 do
   riverctl input $pad events enabled

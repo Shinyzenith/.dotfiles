@@ -80,7 +80,7 @@ sudo aura -S --noconfirm --needed pcmanfm-gtk3
 sudo aura -S --noconfirm --needed polkit-gnome
 sudo aura -S --noconfirm --needed brightnessctl
 sudo aura -S --noconfirm --needed xdg-user-dirs
-sudo aura -Aca --noconfirm discord-canary-electron-bin
+sudo aura -S --noconfirm --needed discord-canary
 sudo aura -S --noconfirm --needed noto-fonts-emoji
 sudo aura -S --noconfirm --needed zathura-pdf-mupdf
 sudo aura -S --noconfirm --needed archlinux-keyring
