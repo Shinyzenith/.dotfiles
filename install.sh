@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Haven't tested this script yet !!!!!!!!!!!!!!!!!!!!!!!!
+# Haven't tested this script yet !!!!!
 # have to update depdendency list
 #part1
 echo "For UEFI installs only."
@@ -79,6 +79,7 @@ cd ~/.dotfiles
 sudo cp ./assets/pacman.conf /etc/pacman.conf
 sudo pacman -Syy
 
+# pipewire stuff
 sudo aura -S --noconfirm --needed pipewire
 sudo aura -S --noconfirm --needed pipewire-alsa
 sudo aura -S --noconfirm --needed pipewire-pulse
@@ -119,6 +120,7 @@ sudo aura -S --noconfirm --needed wmname
 sudo aura -S --noconfirm --needed polkit
 sudo aura -S --noconfirm --needed ranger
 sudo aura -S --noconfirm --needed openssh
+sudo ln -s /etc/runit/sv/sshd /run/runit/service
 #sudo aura -S --noconfirm --needed ntfs-3g
 sudo aura -S --noconfirm --needed mlocate
 sudo aura -S --noconfirm --needed zathura
@@ -136,7 +138,7 @@ sudo aura -S --noconfirm --needed pcmanfm-gtk3
 sudo aura -S --noconfirm --needed polkit-gnome
 sudo aura -S --noconfirm --needed brightnessctl
 sudo aura -S --noconfirm --needed xdg-user-dirs
-sudo aura -Aca --noconfirm discord-canary-electron-bin
+sudo aura -S --noconfirm --needed discord-canary
 sudo aura -S --noconfirm --needed noto-fonts-emoji
 sudo aura -S --noconfirm --needed zathura-pdf-mupdf
 sudo aura -S --noconfirm --needed archlinux-keyring
@@ -186,7 +188,9 @@ sudo aura -Aca --noconfirm nordic-darker-theme
 sudo aura -Aca --noconfirm otf-san-francisco
 sudo aura -S --noconfirm --needed zsh-autosuggestions
 sudo aura -S --noconfirm --needed zsh-syntax-highlighting
-sudo aura -S --noconfirm --needed qutebrowser
+#sudo aura -S --noconfirm --needed qutebrowser
+sudo aura -S --noconfirm --needed firefox
+sudo aura -S --noconfirm --needed brave
 sudo aura -S --noconfirm --needed network-manager-applet
 sudo aura -S --noconfirm --needed networkmanager
 sudo aura -Aca --noconfirm  oh-my-zsh-git

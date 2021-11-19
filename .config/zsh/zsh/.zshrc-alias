@@ -73,6 +73,7 @@ ex ()
 
 gitpush ()
 {
+	set -e
 	git diff
 	git add .
 	echo "Type a commit message."

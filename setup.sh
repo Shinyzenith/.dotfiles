@@ -63,6 +63,7 @@ sudo aura -S --noconfirm --needed wmname
 sudo aura -S --noconfirm --needed polkit
 sudo aura -S --noconfirm --needed ranger
 sudo aura -S --noconfirm --needed openssh
+sudo ln -s /etc/runit/sv/sshd /run/runit/service
 #sudo aura -S --noconfirm --needed ntfs-3g
 sudo aura -S --noconfirm --needed mlocate
 sudo aura -S --noconfirm --needed zathura

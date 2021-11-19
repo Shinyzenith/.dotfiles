@@ -6,8 +6,8 @@
 #                     |___/
 
 
-if [ -d "$HOME/.bin" ] ;
-  then PATH="$HOME/.bin:$PATH"
+if [ -d "$HOME/.config/bin" ] ;
+  then PATH="$HOME/.config/bin:$PATH"
 fi
 
 if [ -d "$HOME/.config/bin" ] ;
