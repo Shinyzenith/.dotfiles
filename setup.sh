@@ -11,12 +11,7 @@ then
 fi
 
 # arch linux support
-sudo aura -S --needed --noconfirm artix-archlinux-support
-
-# enabling chaotic
-sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
-sudo pacman-key --lsign-key 3056513887B78AEB
-sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' --noconfirm --needed
+sudo aura -S --noconfirm --needed artix-archlinux-support
 
 cd ~/.dotfiles
 sudo cp ./assets/pacman.conf /etc/pacman.conf
@@ -138,31 +133,31 @@ sudo aura -S --noconfirm --needed network-manager-applet
 sudo aura -S --noconfirm --needed networkmanager
 sudo aura -Aca --noconfirm  oh-my-zsh-git
 sudo aura -S --noconfirm --needed yt-dlp
-sudo aura -S --noconfirm papirus-icon-theme
+sudo aura -S --noconfirm --needed papirus-icon-theme
 
 
 # wayland setup
-sudo aura -S --needed --noconfirm foot
+sudo aura -S --noconfirm --needed foot
 sudo aura -Aca --noconfirm rofi-lbonn-wayland-git
 sudo aura -Aca --noconfirm rivercarro-git
 #sudo aura -Aca --noconfirm kile-wl
-sudo aura -S --needed --noconfirm mako
-sudo aura -S --needed --noconfirm stow
-sudo aura -S --needed --noconfirm wlroots
-sudo aura -S --needed --noconfirm xorg-xwayland
+sudo aura -S --noconfirm --needed mako
+sudo aura -S --noconfirm --needed stow
+sudo aura -S --noconfirm --needed wlroots
+sudo aura -S --noconfirm --needed xorg-xwayland
 sudo aura -Aca --noconfirm river-git
 sudo aura -Aca --noconfirm swaybg-git
 sudo aura -Aca --noconfirm waybar-git
 
 # OBS packages
-sudo aura -S --needed --noconfirm qt5-wayland
-sudo aura -S --needed --noconfirm pipewire
-sudo aura -S --needed --noconfirm obs-studio
+sudo aura -S --noconfirm --needed qt5-wayland
+sudo aura -S --noconfirm --needed pipewire
+sudo aura -S --noconfirm --needed obs-studio
 
 # screenshot utilities
-sudo aura -S --needed --noconfirm grim
-sudo aura -S --needed --noconfirm slurp
-sudo aura -S --needed --noconfirm wl-clipboard
+sudo aura -S --noconfirm --needed grim
+sudo aura -S --noconfirm --needed slurp
+sudo aura -S --noconfirm --needed wl-clipboard
 
 #cleaning up orphans
 sudo pacman -Rns --noconfirm scdoc
