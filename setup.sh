@@ -114,11 +114,12 @@ sudo aura -S --noconfirm --needed python-pip
 
 #sudo aura -S --noconfirm --needed neofetch
 sudo aura -S --noconfirm --needed zathura-ps
+sudo aura -S --noconfirm --needed pacman-contrib
 sudo aura -S --noconfirm --needed imagemagick
 
 sudo aura -Aca --noconfirm cursor-theme-macos-big-sur
 sudo aura -Aca --noconfirm gotop-bin
-#sudo aura -Aca --noconfirm moc-pulse
+sudo aura -Aca --noconfirm moc-pulse
 sudo aura -Aca --noconfirm nerd-fonts-complete
 sudo aura -S --noconfirm --needed ttf-jetbrains-mono
 sudo aura -S --noconfirm --needed ttf-nerd-fonts-symbols
@@ -138,6 +139,7 @@ sudo aura -S --noconfirm --needed papirus-icon-theme
 
 # wayland setup
 sudo aura -S --noconfirm --needed foot
+sudo aura -Rns --noconfirm --needed foot-themes
 sudo aura -Aca --noconfirm rofi-lbonn-wayland-git
 sudo aura -Aca --noconfirm rivercarro-git
 #sudo aura -Aca --noconfirm kile-wl
