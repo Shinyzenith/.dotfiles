@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-echo " $(date '+%A, %d/%m/%y %T %p') "
+echo " $(date '+%A, %d/%m/%y %r') "

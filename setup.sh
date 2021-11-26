@@ -26,8 +26,9 @@ sudo aura -S --noconfirm --needed lib32-pipewire
 sudo aura -S --noconfirm --needed lib32-pipewire-jack
 sudo aura -S --noconfirm --needed xdg-desktop-portal-wlr
 sudo aura -S --noconfirm --needed pulsemixer
-sudo aura -S --noconfirm --needed helvum
-sudo aura -S --noconfirm --needed easyeffects
+# sudo aura -S --noconfirm --needed easyeffects
+# sudo aura -S --noconfirm --needed helvum
+# sudo aura -S --noconfirm --needed carla
 
 # base package install
 sudo aura -S --noconfirm --needed scdoc
