@@ -43,13 +43,13 @@ window#waybar.hidden {
 
 #tags button.occupied {
 	transition: none;
-	color: #BF616A;
+	color: #f7768e;
 	background: transparent;
 	font-size: 16px;
 }
 
 #tags button.focused {
-	color: #5E81AC;
+	color: #2ac3de;
     border-top: 2px solid #7aa2f7;
     border-bottom: 2px solid #7aa2f7;
 }
@@ -61,10 +61,6 @@ window#waybar.hidden {
 	color: #EBCB8B;
     border-color: #bb9af7;
     color: #bb9af7;
-}
-
-#tags button.focused {
-    color: #7aa2f7;
 }
 
 #tags button.focused:hover {
@@ -138,7 +134,7 @@ window#waybar.hidden {
 	border-radius: 15px;
 	transition: none;
 	color: #2E3440;
-	background: #D08770;
+	background: #f7768e;
 }
 #custom-clock {
 	margin-top: 8px;
@@ -187,6 +183,6 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 15px;
 	transition: none;
-	color: #2E3440;
-	background: #60AFEE;
+	color: #000000;
+	background: #7aa2f7;
 }
