@@ -11,7 +11,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'arcticicestudio/nord-vim'
+# Plug 'arcticicestudio/nord-vim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
@@ -67,7 +68,7 @@ set scrolloff=999
 "vvvvvvvvvvvvv set airline to have angled separators vvvvvvvvvvvv
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'nord'
+let g:airline_theme = 'base16'
 let g:smoothe_enabled = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:NERDTreeGitStatusUseNerdFonts = 1
@@ -117,7 +118,8 @@ set cindent
 set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
-colorscheme nord
+# colorscheme nord
+colorscheme tokyonight
 set background=dark
 function! IsNERDTreeOpen()        
   return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
