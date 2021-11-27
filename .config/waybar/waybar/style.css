@@ -1,8 +1,8 @@
 * {
 	border: none;
 	border-radius: 0;
-	font-family: JetBrains Mono;
-	font-size: 15px;
+    font-family: "SF Pro Display";
+	font-size: 16px;
 	min-height: 24px;
 }
 
@@ -27,7 +27,7 @@ window#waybar.hidden {
 	margin-top: 8px;
 	margin-left: 12px;
 	margin-bottom: 0px;
-	border-radius: 15px;
+	border-radius: 10px;
 	/*background: #2E3440;*/
 	background: #111318;
 	transition: none;
@@ -38,6 +38,7 @@ window#waybar.hidden {
 	color: #D8DEE9;
 	background: transparent;
 	font-size: 16px;
+	border-radius: 3px;
 }
 
 #tags button.occupied {
@@ -49,6 +50,8 @@ window#waybar.hidden {
 
 #tags button.focused {
 	color: #5E81AC;
+    border-top: 2px solid #7aa2f7;
+    border-bottom: 2px solid #7aa2f7;
 }
 
 #tags button:hover {
@@ -56,6 +59,16 @@ window#waybar.hidden {
 	box-shadow: inherit;
 	text-shadow: inherit;
 	color: #EBCB8B;
+    border-color: #bb9af7;
+    color: #bb9af7;
+}
+
+#tags button.focused {
+    color: #7aa2f7;
+}
+
+#tags button.focused:hover {
+    color: #bb9af7;
 }
 
 #network {

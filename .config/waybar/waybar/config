@@ -15,6 +15,19 @@
 			"default": ["奄", "奔", "墳"]
 		}
 	},
+    "river/tags": {
+        "tag-labels":[
+			" ",
+			" ", 
+			" ", 
+			" ", 
+			" ", 
+			" ", 
+			" ", 
+			" ", 
+			" "
+		]
+    },
 	"network": {
 		"tooltip": false,
 		//"format-wifi": "  {essid} {ipaddr}",
