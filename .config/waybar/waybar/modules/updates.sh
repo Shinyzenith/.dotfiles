@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 pkg_updates() {
-	updates=$(pacman -Qu | wc -l)
+	updates=$(checkupdates | wc -l)
   if [ $updates == 0 ]; then
     exit 0
   elif [ $updates == 1 ]; then
