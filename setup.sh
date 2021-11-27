@@ -94,15 +94,15 @@ sudo aura -S --noconfirm --needed adobe-source-han-serif-tw-fonts
 sudo aura -S --noconfirm --needed bbswitch
 sudo aura -S --noconfirm --needed intel-ucode
 sudo aura -S --noconfirm --needed lib32-mesa 
-sudo aura -S --noconfirm --needed lib32-nvidia-utils 
+# sudo aura -S --noconfirm --needed lib32-nvidia-utils 
 sudo aura -S --noconfirm --needed lib32-vulkan-icd-loader
 sudo aura -S --noconfirm --needed lib32-vulkan-icd-loader
 sudo aura -S --noconfirm --needed lib32-vulkan-intel 
 sudo aura -S --noconfirm --needed mesa
-sudo aura -S --noconfirm --needed nvidia
-sudo aura -S --noconfirm --needed nvidia-prime
-sudo aura -S --noconfirm --needed nvidia-settings
-sudo aura -S --noconfirm --needed nvidia-utils
+# sudo aura -S --noconfirm --needed nvidia
+# sudo aura -S --noconfirm --needed nvidia-prime
+# sudo aura -S --noconfirm --needed nvidia-settings
+# sudo aura -S --noconfirm --needed nvidia-utils
 sudo aura -S --noconfirm --needed vulkan-icd-loader 
 sudo aura -S --noconfirm --needed vulkan-icd-loader 
 sudo aura -S --noconfirm --needed vulkan-intel 
