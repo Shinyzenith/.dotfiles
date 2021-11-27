@@ -34,4 +34,4 @@ if __name__ == '__main__':
     distros = [('xelphlinux', 'xelph-iso')]
 
     for distro in distros:
-        print(f" {OS(f'{base_url}{distro[0]}/{distro[1]}/total?label=downloads',distro[0].capitalize()).num_downloads()}")
+        print(f"  {OS(f'{base_url}{distro[0]}/{distro[1]}/total?label=downloads',distro[0].capitalize()).num_downloads()}")

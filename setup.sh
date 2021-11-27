@@ -177,7 +177,6 @@ sudo cp ./wallpapers/* /usr/share/backgrounds/
 sudo python3 -m pip install neovim
 sudo python3 -m pip insall beautifulsoup4
 sudo npm install neovim --global
-mkdir -p ~/.bin
 mkdir -p ~/.vim/undodir
 mkdir -p ~/Pictures/screenshots
 mkdir -p ~/Videos/recordings
