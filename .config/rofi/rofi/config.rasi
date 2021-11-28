@@ -20,7 +20,7 @@ configuration {
 window {
 	transparency:                   "real";
 	width:			    	40%;
-	border-radius: 25px;
+	border-radius: 25px; 
 }
 
 prompt { enabled: false; }
