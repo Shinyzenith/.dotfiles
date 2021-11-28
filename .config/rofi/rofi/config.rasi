@@ -10,8 +10,8 @@ configuration {
 
 * {
 	bg:				#111318;
-	fg:				#61afef;
-	button:				#282c34;
+	fg:				#F7768E;
+	button:			#282c34;
 
 	background-color:		@bg;
 	text-color:			@fg;

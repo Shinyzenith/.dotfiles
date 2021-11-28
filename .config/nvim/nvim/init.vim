@@ -11,6 +11,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'chrisbra/Colorizer'
 "Plug 'arcticicestudio/nord-vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'HerringtonDarkholme/yats.vim'
