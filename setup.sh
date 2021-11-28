@@ -62,7 +62,6 @@ sudo aura -S --noconfirm --needed polkit
 sudo aura -S --noconfirm --needed ranger
 sudo aura -S --noconfirm --needed openssh
 sudo ln -s /etc/runit/sv/sshd /run/runit/service
-#sudo aura -S --noconfirm --needed ntfs-3g
 sudo aura -S --noconfirm --needed mlocate
 sudo aura -S --noconfirm --needed zathura
 sudo aura -S --noconfirm --needed reflector
@@ -130,7 +129,6 @@ sudo aura -Aca --noconfirm nordic-darker-theme
 sudo aura -Aca --noconfirm otf-san-francisco
 sudo aura -S --noconfirm --needed zsh-autosuggestions
 sudo aura -S --noconfirm --needed zsh-syntax-highlighting
-#sudo aura -S --noconfirm --needed qutebrowser
 sudo aura -S --noconfirm --needed firefox
 sudo aura -S --noconfirm --needed brave
 sudo aura -S --noconfirm --needed network-manager-applet
@@ -146,7 +144,6 @@ sudo aura -S --noconfirm --needed foot
 sudo aura -Rns --noconfirm --needed foot-themes
 sudo aura -Aca --noconfirm rofi-lbonn-wayland-git
 sudo aura -Aca --noconfirm rivercarro-git
-#sudo aura -Aca --noconfirm kile-wl
 sudo aura -S --noconfirm --needed mako
 sudo aura -S --noconfirm --needed stow
 sudo aura -S --noconfirm --needed wlroots
