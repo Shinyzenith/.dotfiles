@@ -52,7 +52,7 @@ sudo aura -S --noconfirm --needed p7zip
 sudo aura -S --noconfirm --needed expac
 sudo aura -S --noconfirm --needed qt5ct
 sudo aura -S --noconfirm --needed xclip
-sudo aura -S --noconfirm --needed bluez 
+sudo aura -S --noconfirm --needed bluez
 sudo aura -S --noconfirm --needed bluez-runit
 sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 sudo aura -S --noconfirm --needed zenity
@@ -84,28 +84,28 @@ sudo aura -S --noconfirm --needed noto-fonts-emoji
 sudo aura -S --noconfirm --needed zathura-pdf-mupdf
 sudo aura -S --noconfirm --needed archlinux-keyring
 
-sudo aura -S --noconfirm --needed adobe-source-han-serif-cn-fonts 
-sudo aura -S --noconfirm --needed adobe-source-han-serif-jp-fonts 
-sudo aura -S --noconfirm --needed adobe-source-han-serif-kr-fonts 
-sudo aura -S --noconfirm --needed adobe-source-han-serif-otc-fonts 
+sudo aura -S --noconfirm --needed adobe-source-han-serif-cn-fonts
+sudo aura -S --noconfirm --needed adobe-source-han-serif-jp-fonts
+sudo aura -S --noconfirm --needed adobe-source-han-serif-kr-fonts
+sudo aura -S --noconfirm --needed adobe-source-han-serif-otc-fonts
 sudo aura -S --noconfirm --needed adobe-source-han-serif-tw-fonts
 
 
 sudo aura -S --noconfirm --needed bbswitch
 sudo aura -S --noconfirm --needed intel-ucode
-sudo aura -S --noconfirm --needed lib32-mesa 
-# sudo aura -S --noconfirm --needed lib32-nvidia-utils 
+sudo aura -S --noconfirm --needed lib32-mesa
+# sudo aura -S --noconfirm --needed lib32-nvidia-utils
 sudo aura -S --noconfirm --needed lib32-vulkan-icd-loader
 sudo aura -S --noconfirm --needed lib32-vulkan-icd-loader
-sudo aura -S --noconfirm --needed lib32-vulkan-intel 
+sudo aura -S --noconfirm --needed lib32-vulkan-intel
 sudo aura -S --noconfirm --needed mesa
 # sudo aura -S --noconfirm --needed nvidia
 # sudo aura -S --noconfirm --needed nvidia-prime
 # sudo aura -S --noconfirm --needed nvidia-settings
 # sudo aura -S --noconfirm --needed nvidia-utils
-sudo aura -S --noconfirm --needed vulkan-icd-loader 
-sudo aura -S --noconfirm --needed vulkan-icd-loader 
-sudo aura -S --noconfirm --needed vulkan-intel 
+sudo aura -S --noconfirm --needed vulkan-icd-loader
+sudo aura -S --noconfirm --needed vulkan-icd-loader
+sudo aura -S --noconfirm --needed vulkan-intel
 sudo aura -S --noconfirm --needed xf86-video-intel
 
 sudo aura -S --noconfirm --needed npm
@@ -188,6 +188,7 @@ sudo chown $USER /usr/share/icons/default/index.theme
 sudo chown $USER /usr/share/backgrounds
 sudo echo "[Icon Theme]" > /usr/share/icons/default/index.theme
 sudo echo "Inherits=macOSBigSur" >> /usr/share/icons/default/index.theme
+sudo cp -r ~/.dotfiles/usr/share/themes/TokyoNight /usr/share/themes/
 sudo chown root /usr/share/icons/default/index.theme
 sudo gpasswd -a $USER video
 sudo gpasswd -a $USER power
