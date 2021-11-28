@@ -10,7 +10,7 @@ configuration {
 
 * {
 	bg:				#111318;
-	fg:				#F7768E;
+	fg:				#6C62E9;
 	button:			#282c34;
 
 	background-color:		@bg;
