@@ -87,7 +87,7 @@ window#waybar.hidden {
 	margin-bottom: 0px;
 	border-radius: 15px;
 	transition: none;
-	color: #2E3440;
+	color: #111318;
 	background: #60AFEE;
 }
 
@@ -183,6 +183,6 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 15px;
 	transition: none;
-	color: #000000;
+	color: #111318;
 	background: #7aa2f7;
 }
