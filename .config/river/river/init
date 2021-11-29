@@ -10,6 +10,12 @@ riverctl map normal $mod Return spawn foot
 # Open rofi
 riverctl map normal $mod D spawn "rofi -show drun"
 
+# Open Gotop
+riverctl map normal $mod G spawn "foot -e gotop"
+
+# Open Btop
+riverctl map normal $mod+Shift B spawn "foot -e btop"
+
 # Open browser of choice, firefox
 riverctl map normal $mod W spawn "firefox"
 
