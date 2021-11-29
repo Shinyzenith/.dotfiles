@@ -140,6 +140,7 @@ sudo aura -S --noconfirm --needed papirus-icon-theme
 
 # wayland setup
 sudo aura -S --noconfirm --needed tokyo-night-gtk
+sudo aura -S --noconfirm --needed tokyo-night-wallpapers
 sudo aura -S --noconfirm --needed foot
 sudo aura -Rns --noconfirm --needed foot-themes
 sudo aura -Aca --noconfirm rofi-lbonn-wayland-git
@@ -169,8 +170,6 @@ sudo aura -Oj --noconfirm
 
 xdg-user-dirs-update
 cd ~/.dotfiles
-sudo mkdir /usr/share/backgrounds
-sudo cp ./wallpapers/* /usr/share/backgrounds/
 ./config.sh
 sudo python3 -m pip install neovim
 sudo python3 -m pip insall beautifulsoup4
