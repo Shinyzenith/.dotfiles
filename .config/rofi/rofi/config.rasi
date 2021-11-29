@@ -9,8 +9,8 @@ configuration {
 @theme "/dev/null"
 
 * {
-	bg:				#111318;
-	fg:				#6C62E9;
+	bg:				#181923;
+	fg:				#6E93CC;
 	button:			#282c34;
 
 	background-color:		@bg;
