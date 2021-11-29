@@ -62,6 +62,8 @@ exit
 sudo rm /artix_install2.sh
 cd $HOME
 # sleep , poweroff, reboot and otehr integrations https://wiki.artixlinux.org/Main/Elogind
+
+# installing our package manager
 sudo pacman -S --noconfirm --needed git
 if ! command -v aura &> /dev/null
 then
@@ -69,11 +71,9 @@ then
 	cd /tmp/aura-git-cloned/
 	makepkg -sfci --noconfirm --needed
 fi
-git clone https://github.com/shinyzenith/.dotfiles
-sudo aura -S --needed --noconfirm artix-archlinux-support
-sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
-sudo pacman-key --lsign-key 3056513887B78AEB
-sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' --noconfirm --needed
+
+# arch linux support
+sudo aura -S --noconfirm --needed artix-archlinux-support
 
 cd ~/.dotfiles
 sudo cp ./assets/pacman.conf /etc/pacman.conf
@@ -88,6 +88,9 @@ sudo aura -S --noconfirm --needed lib32-pipewire
 sudo aura -S --noconfirm --needed lib32-pipewire-jack
 sudo aura -S --noconfirm --needed xdg-desktop-portal-wlr
 sudo aura -S --noconfirm --needed pulsemixer
+# sudo aura -S --noconfirm --needed easyeffects
+# sudo aura -S --noconfirm --needed helvum
+# sudo aura -S --noconfirm --needed carla
 
 # base package install
 sudo aura -S --noconfirm --needed scdoc
@@ -111,7 +114,7 @@ sudo aura -S --noconfirm --needed p7zip
 sudo aura -S --noconfirm --needed expac
 sudo aura -S --noconfirm --needed qt5ct
 sudo aura -S --noconfirm --needed xclip
-sudo aura -S --noconfirm --needed bluez 
+sudo aura -S --noconfirm --needed bluez
 sudo aura -S --noconfirm --needed bluez-runit
 sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 sudo aura -S --noconfirm --needed zenity
@@ -121,7 +124,6 @@ sudo aura -S --noconfirm --needed polkit
 sudo aura -S --noconfirm --needed ranger
 sudo aura -S --noconfirm --needed openssh
 sudo ln -s /etc/runit/sv/sshd /run/runit/service
-#sudo aura -S --noconfirm --needed ntfs-3g
 sudo aura -S --noconfirm --needed mlocate
 sudo aura -S --noconfirm --needed zathura
 sudo aura -S --noconfirm --needed reflector
@@ -143,28 +145,28 @@ sudo aura -S --noconfirm --needed noto-fonts-emoji
 sudo aura -S --noconfirm --needed zathura-pdf-mupdf
 sudo aura -S --noconfirm --needed archlinux-keyring
 
-sudo aura -S --noconfirm --needed adobe-source-han-serif-cn-fonts 
-sudo aura -S --noconfirm --needed adobe-source-han-serif-jp-fonts 
-sudo aura -S --noconfirm --needed adobe-source-han-serif-kr-fonts 
-sudo aura -S --noconfirm --needed adobe-source-han-serif-otc-fonts 
+sudo aura -S --noconfirm --needed adobe-source-han-serif-cn-fonts
+sudo aura -S --noconfirm --needed adobe-source-han-serif-jp-fonts
+sudo aura -S --noconfirm --needed adobe-source-han-serif-kr-fonts
+sudo aura -S --noconfirm --needed adobe-source-han-serif-otc-fonts
 sudo aura -S --noconfirm --needed adobe-source-han-serif-tw-fonts
 
 
 sudo aura -S --noconfirm --needed bbswitch
 sudo aura -S --noconfirm --needed intel-ucode
-sudo aura -S --noconfirm --needed lib32-mesa 
-sudo aura -S --noconfirm --needed lib32-nvidia-utils 
+sudo aura -S --noconfirm --needed lib32-mesa
+# sudo aura -S --noconfirm --needed lib32-nvidia-utils
 sudo aura -S --noconfirm --needed lib32-vulkan-icd-loader
 sudo aura -S --noconfirm --needed lib32-vulkan-icd-loader
-sudo aura -S --noconfirm --needed lib32-vulkan-intel 
+sudo aura -S --noconfirm --needed lib32-vulkan-intel
 sudo aura -S --noconfirm --needed mesa
-sudo aura -S --noconfirm --needed nvidia
-sudo aura -S --noconfirm --needed nvidia-prime
-sudo aura -S --noconfirm --needed nvidia-settings
-sudo aura -S --noconfirm --needed nvidia-utils
-sudo aura -S --noconfirm --needed vulkan-icd-loader 
-sudo aura -S --noconfirm --needed vulkan-icd-loader 
-sudo aura -S --noconfirm --needed vulkan-intel 
+# sudo aura -S --noconfirm --needed nvidia
+# sudo aura -S --noconfirm --needed nvidia-prime
+# sudo aura -S --noconfirm --needed nvidia-settings
+# sudo aura -S --noconfirm --needed nvidia-utils
+sudo aura -S --noconfirm --needed vulkan-icd-loader
+sudo aura -S --noconfirm --needed vulkan-icd-loader
+sudo aura -S --noconfirm --needed vulkan-intel
 sudo aura -S --noconfirm --needed xf86-video-intel
 
 sudo aura -S --noconfirm --needed npm
@@ -176,11 +178,12 @@ sudo aura -S --noconfirm --needed python-pip
 
 #sudo aura -S --noconfirm --needed neofetch
 sudo aura -S --noconfirm --needed zathura-ps
+sudo aura -S --noconfirm --needed pacman-contrib
 sudo aura -S --noconfirm --needed imagemagick
 
 sudo aura -Aca --noconfirm cursor-theme-macos-big-sur
 sudo aura -Aca --noconfirm gotop-bin
-#sudo aura -Aca --noconfirm moc-pulse
+sudo aura -Aca --noconfirm moc-pulse
 sudo aura -Aca --noconfirm nerd-fonts-complete
 sudo aura -S --noconfirm --needed ttf-jetbrains-mono
 sudo aura -S --noconfirm --needed ttf-nerd-fonts-symbols
@@ -188,38 +191,39 @@ sudo aura -Aca --noconfirm nordic-darker-theme
 sudo aura -Aca --noconfirm otf-san-francisco
 sudo aura -S --noconfirm --needed zsh-autosuggestions
 sudo aura -S --noconfirm --needed zsh-syntax-highlighting
-#sudo aura -S --noconfirm --needed qutebrowser
 sudo aura -S --noconfirm --needed firefox
 sudo aura -S --noconfirm --needed brave
 sudo aura -S --noconfirm --needed network-manager-applet
 sudo aura -S --noconfirm --needed networkmanager
 sudo aura -Aca --noconfirm  oh-my-zsh-git
 sudo aura -S --noconfirm --needed yt-dlp
-sudo aura -S --noconfirm papirus-icon-theme
+sudo aura -S --noconfirm --needed papirus-icon-theme
 
 
 # wayland setup
-sudo aura -S --needed --noconfirm foot
+sudo aura -S --noconfirm --needed tokyo-night-gtk
+sudo aura -S --noconfirm --needed tokyo-night-wallpapers
+sudo aura -S --noconfirm --needed foot
+sudo aura -Rns --noconfirm --needed foot-themes
 sudo aura -Aca --noconfirm rofi-lbonn-wayland-git
 sudo aura -Aca --noconfirm rivercarro-git
-#sudo aura -Aca --noconfirm kile-wl
-sudo aura -S --needed --noconfirm mako
-sudo aura -S --needed --noconfirm stow
-sudo aura -S --needed --noconfirm wlroots
-sudo aura -S --needed --noconfirm xorg-xwayland
+sudo aura -S --noconfirm --needed mako
+sudo aura -S --noconfirm --needed stow
+sudo aura -S --noconfirm --needed wlroots
+sudo aura -S --noconfirm --needed xorg-xwayland
 sudo aura -Aca --noconfirm river-git
 sudo aura -Aca --noconfirm swaybg-git
 sudo aura -Aca --noconfirm waybar-git
 
 # OBS packages
-sudo aura -S --needed --noconfirm qt5-wayland
-sudo aura -S --needed --noconfirm pipewire
-sudo aura -S --needed --noconfirm obs-studio
+sudo aura -S --noconfirm --needed qt5-wayland
+sudo aura -S --noconfirm --needed pipewire
+sudo aura -S --noconfirm --needed obs-studio
 
 # screenshot utilities
-sudo aura -S --needed --noconfirm grim
-sudo aura -S --needed --noconfirm slurp
-sudo aura -S --needed --noconfirm wl-clipboard
+sudo aura -S --noconfirm --needed grim
+sudo aura -S --noconfirm --needed slurp
+sudo aura -S --noconfirm --needed wl-clipboard
 
 #cleaning up orphans
 sudo pacman -Rns --noconfirm scdoc
@@ -228,13 +232,10 @@ sudo aura -Oj --noconfirm
 
 xdg-user-dirs-update
 cd ~/.dotfiles
-sudo mkdir /usr/share/backgrounds
-sudo cp ./wallpapers/* /usr/share/backgrounds/
 ./config.sh
 sudo python3 -m pip install neovim
 sudo python3 -m pip insall beautifulsoup4
 sudo npm install neovim --global
-mkdir -p ~/.bin
 mkdir -p ~/.vim/undodir
 mkdir -p ~/Pictures/screenshots
 mkdir -p ~/Videos/recordings
@@ -246,10 +247,12 @@ sudo chown $USER /usr/share/icons/default/index.theme
 sudo chown $USER /usr/share/backgrounds
 sudo echo "[Icon Theme]" > /usr/share/icons/default/index.theme
 sudo echo "Inherits=macOSBigSur" >> /usr/share/icons/default/index.theme
+sudo cp -r ~/.dotfiles/usr/share/themes/TokyoNight /usr/share/themes/
 sudo chown root /usr/share/icons/default/index.theme
 sudo gpasswd -a $USER video
 sudo gpasswd -a $USER power
 sudo gpasswd -a $USER audio
+loginctl reboot
 sudo rm -rf /home/$USER/artix_install3.sh
 loginctl reboot
 exit
