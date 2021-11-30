@@ -1,3 +1,15 @@
+if [ -d "$HOME/.config/bin" ] ;
+  then PATH="$HOME/.config/bin:$PATH"
+fi
+
+if [ -d "$HOME/.config/bin" ] ;
+  then PATH="$HOME/.config/bin:$PATH"
+fi
+
+if [ -d "$HOME/.local/bin" ] ;
+  then PATH="$HOME/.local/bin:$PATH"
+fi
+
 export MOZ_ENABLE_WAYLAND=1
 export XDG_SESSION_TYPE=wayland
 export XDG_SESSION_DESKTOP=river
@@ -16,7 +28,6 @@ export CUDA_CACHE_PATH="${XDG_CACHE_HOME:-$HOME/.cache}/nv"
 export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="${XDG_CONFIG_HOME:-$HOME/.config}/java"
-
 timestamp=$(date +%F-%R)
 /usr/bin/pipewire 2>/tmp/pipewire-${timestamp}.log &
 /usr/bin/pipewire-pulse 2>/tmp/pipewire-pulse-${timestamp}.log &

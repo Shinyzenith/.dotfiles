@@ -5,18 +5,6 @@
 #|____/|_| |_|_|_| |_|\__, /___\___|_| |_|_|\__|_| |_| (_)____|___/_| |_|_|  \___|
 #                     |___/
 
-
-if [ -d "$HOME/.config/bin" ] ;
-  then PATH="$HOME/.config/bin:$PATH"
-fi
-
-if [ -d "$HOME/.config/bin" ] ;
-  then PATH="$HOME/.config/bin:$PATH"
-fi
-
-if [ -d "$HOME/.local/bin" ] ;
-  then PATH="$HOME/.local/bin:$PATH"
-fi
 export PROMPT="%F{078}%~"$'\n'" ❯ %f"
 autoload -U promptinit; promptinit
 autoload -U colors && colors

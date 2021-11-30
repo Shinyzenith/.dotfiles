@@ -76,7 +76,7 @@ sudo aura -S --noconfirm --needed intel-ucode
 sudo aura -S --noconfirm --needed kvantum-qt5
 sudo aura -S --noconfirm --needed pcmanfm-gtk3
 sudo aura -S --noconfirm --needed polkit-gnome
-sudo aura -S --noconfirm --needed brightnessctl
+sudo aura -S --noconfirm --needed light
 sudo aura -S --noconfirm --needed xdg-user-dirs
 sudo aura -S --noconfirm --needed discord-canary
 sudo aura -S --noconfirm --needed noto-fonts-emoji
