@@ -13,6 +13,7 @@ fi
 export MOZ_ENABLE_WAYLAND=1
 export XDG_SESSION_TYPE=wayland
 export XDG_SESSION_DESKTOP=river
+export XDG_CONFIG_HOME=$HOME/.config/
 export XDG_CURRENT_DESKTOP=river
 export QT_QPA_PLATFORM=wayland
 export QT_QPA_PLATFORMTHEME=qt5ct

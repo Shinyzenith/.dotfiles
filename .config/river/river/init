@@ -1,6 +1,7 @@
 #!/bin/sh
 # Read the river, riverctl, and rivertile man pages.
 
+# Use the "logo" key as the primary modifier
 mod="Mod4"
 riverctl spawn "dbus-update-activation-environment SEATD_SOCK DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
 
@@ -49,6 +50,7 @@ riverctl map normal Control m spawn "/home/$USER/.config/bin/mansplain"
 # Screenshot
 riverctl map normal None Print spawn 'IMG=~/Pictures/screenshots/$(date | sed "s/\s/-/g" | sed "s/--/-/g").png&&grim -g "$(slurp)" $IMG && cat $IMG | wl-copy && notify-send "Screenshot has been saved and copied to your clipboard" -a "grim" -u critical -t 2000'
 riverctl map normal $mod Print spawn 'IMG=~/Pictures/screenshots/$(date | sed "s/\s/-/g" | sed "s/--/-/g").png&&grim $IMG && cat $IMG | wl-copy && notify-send "Screenshot has been saved and copied to your clipboard" -a "grim" -u critical -t 2000'
+riverctl map normal $mod+Shift Print spawn 'bash $HOME/.config/bin/grimshot'
 
 # Clear clipboard
 riverctl map normal $mod BackSpace spawn 'wl-copy -c && printf ''|xclip -selection c'
@@ -214,24 +216,5 @@ riverctl map normal $mod+Shift P set-view-tags ${scratch_tag}
 all_but_scratch_tag=$(( ((1 << 32) - 1) ^ $scratch_tag ))
 riverctl spawn-tagmask ${all_but_scratch_tag}
 
-killall swaybg
-swaybg -i /usr/share/backgrounds/wall.jpg &
-killall mako
-mako &
-killall waybar
-waybar &
-bash ~/.config/bin/gtktheme # setting our gtk variables
-killall polkit-gnome-authentication-agent-1
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-killall nm-applet
-nm-applet --indicator &
-# Set and exec into the default layout generator, rivertile.
-# River will send the process group of the init executable SIGTERM on exit.
-riverctl default-layout rivertile &
-exec rivertile -main-ratio 0.5 -view-padding 5 -outer-padding 8 &
-for pad in $(riverctl list-inputs | grep -i touchpad )
-do
-  riverctl input $pad events enabled
-  riverctl input $pad tap enabled
-done
-light -S 50%
+bash $HOME/.config/river/process.sh
+bash $HOME/.config/river/touchpad.sh

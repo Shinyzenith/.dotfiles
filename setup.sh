@@ -160,6 +160,7 @@ sudo aura -S --noconfirm --needed obs-studio
 
 # screenshot utilities
 sudo aura -S --noconfirm --needed grim
+sudo aura -S --noconfirm --needed swappy
 sudo aura -S --noconfirm --needed slurp
 sudo aura -S --noconfirm --needed wl-clipboard
 
