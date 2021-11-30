@@ -1,3 +1,4 @@
+killall wlsunset
 wlsunset -l $(curl "https://json.geoiplookup.io/$(curl https://ipinfo.io/ip)" | grep -i "latitude" | awk '{print $NF}' | cut -d',' -f1) -L $(curl "https://json.geoiplookup.io/$(curl https://ipinfo.io/ip)" | grep -i "longitude" | awk '{print $NF}' | cut -d',' -f1) &
 killall swaybg
 swaybg -i /usr/share/backgrounds/wall.jpg &
@@ -19,4 +20,4 @@ do
   riverctl input $pad events enabled
   riverctl input $pad tap enabled
 done
-light -S 50%
+light -S 100%
