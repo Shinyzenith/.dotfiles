@@ -5,7 +5,6 @@ set -e
 #part1
 echo "For UEFI installs only."
 cd ~/.dotfiles
-cp ./assets/pacman.conf /etc/pacman.conf
 loadkeys us
 lsblk
 echo "Enter the drive: "
@@ -21,6 +20,7 @@ mount $partition /mnt
 mkdir -p /mnt/boot
 mount $bootpartition /mnt/boot
 pacman -Sy artix-archlinux-support
+cp ./assets/pacman.conf /etc/pacman.conf
 basestrap /mnt base base-devel linux linux-firmware linux-headers grub efibootmgr networkmanager networkmanager-runit runit elogind-runit
 fstabgen -U /mnt >> /mnt/etc/fstab
 sed '1,/^#part2$/d' artix_install.sh > /mnt/arch_install2.sh
