@@ -20,6 +20,7 @@ mkfs.vfat -F 32 $bootpartition
 mount $partition /mnt 
 mkdir -p /mnt/boot
 mount $bootpartition /mnt/boot
+pacman -Sy artix-archlinux-support
 basestrap /mnt base base-devel linux linux-firmware linux-headers grub efibootmgr networkmanager networkmanager-runit runit elogind-runit
 fstabgen -U /mnt >> /mnt/etc/fstab
 sed '1,/^#part2$/d' artix_install.sh > /mnt/arch_install2.sh
