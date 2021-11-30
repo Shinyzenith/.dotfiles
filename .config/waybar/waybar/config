@@ -26,7 +26,8 @@
 			" ", 
 			" ", 
 			" "
-		]
+		],
+		"disable-click": false
     },
 	"network": {
 		"tooltip": false,

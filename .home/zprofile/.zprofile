@@ -33,6 +33,7 @@ timestamp=$(date +%F-%R)
 /usr/bin/pipewire 2>/tmp/pipewire-${timestamp}.log &
 /usr/bin/pipewire-pulse 2>/tmp/pipewire-pulse-${timestamp}.log &
 /usr/bin/pipewire-media-session 2>/tmp/pipewire-media-session-${timestamp}.log &
+curl "https://json.geoiplookup.io/$(curl https://ipinfo.io/ip)" > /tmp/coords
 
 if [[ -z $WAYLAND_DISPLAY && $(tty) = "/dev/tty1" ]]; then
 	exec dbus-run-session river -log-level debug > /tmp/river-${timestamp}.log 2>&1

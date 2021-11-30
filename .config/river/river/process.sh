@@ -1,5 +1,5 @@
 killall wlsunset
-wlsunset -l $(curl "https://json.geoiplookup.io/$(curl https://ipinfo.io/ip)" | grep -i "latitude" | awk '{print $NF}' | cut -d',' -f1) -L $(curl "https://json.geoiplookup.io/$(curl https://ipinfo.io/ip)" | grep -i "longitude" | awk '{print $NF}' | cut -d',' -f1) &
+wlsunset -l $(cat /tmp/coords | grep -i "latitude" | awk '{print $NF}' | cut -d',' -f1) -L $(cat /tmp/coords | grep -i "longitude" | awk '{print $NF}' | cut -d',' -f1) &
 killall swaybg
 swaybg -i /usr/share/backgrounds/wall.jpg &
 killall mako
