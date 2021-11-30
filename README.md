@@ -1,4 +1,6 @@
 # Screenshots
+![rice6](https://raw.githubusercontent.com/Shinyzenith/.dotfiles/master/assets/6.png)
+![rice7](https://raw.githubusercontent.com/Shinyzenith/.dotfiles/master/assets/7.png)
 ![rice4](https://raw.githubusercontent.com/Shinyzenith/.dotfiles/master/assets/4.png)
 ![rice5](https://raw.githubusercontent.com/Shinyzenith/.dotfiles/master/assets/5.png)
 ![rice1](https://raw.githubusercontent.com/Shinyzenith/.dotfiles/master/assets/1.png)
