@@ -141,6 +141,7 @@ sudo aura -S --noconfirm --needed papirus-icon-theme
 # wayland setup
 sudo aura -S --noconfirm --needed tokyo-night-gtk
 sudo aura -S --noconfirm --needed tokyo-night-wallpapers
+sudo aura -S --noconfirm --needed wlsunset
 sudo aura -S --noconfirm --needed foot
 sudo aura -Rns --noconfirm --needed foot-themes
 sudo aura -Aca --noconfirm rofi-lbonn-wayland-git
