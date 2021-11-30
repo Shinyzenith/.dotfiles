@@ -35,11 +35,11 @@ alias rg="rg --sort path --no-ignore --hidden" #search content with ripgrep
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl" #Recent Installed Packages
 alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
 alias rm='rm -i'
-alias udpate='sudo aura -Syu; sudo aura -Acakux; sudo aura -Oj'
-alias upate='sudo aura -Syu; sudo aura -Acakux; sudo aura -Oj'
-alias update='sudo aura -Syu; sudo aura -Acakux; sudo aura -Oj'
-alias updqte='sudo aura -Syu; sudo aura -Acakux; sudo aura -Oj'
-alias updte='sudo aura -Syu; sudo aura -Acakux; sudo aura -Oj'
+alias udpate='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
+alias upate='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
+alias update='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
+alias updqte='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
+alias updte='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
 alias updatefonts='sudo fc-cache -fv'
 alias wget="wget -c" # continue the download
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
