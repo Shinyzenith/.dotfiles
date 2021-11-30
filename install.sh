@@ -138,7 +138,7 @@ sudo aura -S --noconfirm --needed intel-ucode
 sudo aura -S --noconfirm --needed kvantum-qt5
 sudo aura -S --noconfirm --needed pcmanfm-gtk3
 sudo aura -S --noconfirm --needed polkit-gnome
-sudo aura -S --noconfirm --needed brightnessctl
+sudo aura -S --noconfirm --needed light
 sudo aura -S --noconfirm --needed xdg-user-dirs
 sudo aura -S --noconfirm --needed discord-canary
 sudo aura -S --noconfirm --needed noto-fonts-emoji
@@ -203,6 +203,7 @@ sudo aura -S --noconfirm --needed papirus-icon-theme
 # wayland setup
 sudo aura -S --noconfirm --needed tokyo-night-gtk
 sudo aura -S --noconfirm --needed tokyo-night-wallpapers
+sudo aura -S --noconfirm --needed wlsunset
 sudo aura -S --noconfirm --needed foot
 sudo aura -Rns --noconfirm --needed foot-themes
 sudo aura -Aca --noconfirm rofi-lbonn-wayland-git
@@ -222,6 +223,7 @@ sudo aura -S --noconfirm --needed obs-studio
 
 # screenshot utilities
 sudo aura -S --noconfirm --needed grim
+sudo aura -S --noconfirm --needed swappy
 sudo aura -S --noconfirm --needed slurp
 sudo aura -S --noconfirm --needed wl-clipboard
 
@@ -252,7 +254,5 @@ sudo chown root /usr/share/icons/default/index.theme
 sudo gpasswd -a $USER video
 sudo gpasswd -a $USER power
 sudo gpasswd -a $USER audio
-loginctl reboot
 sudo rm -rf /home/$USER/artix_install3.sh
 loginctl reboot
-exit
