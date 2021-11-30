@@ -19,7 +19,7 @@ mkfs.vfat -F 32 $bootpartition
 mount $partition /mnt 
 mkdir -p /mnt/boot
 mount $bootpartition /mnt/boot
-pacman -Sy artix-archlinux-support
+pacman -Sy --noconfirm --needed artix-archlinux-support
 cp ./assets/pacman.conf /etc/pacman.conf
 basestrap /mnt base base-devel linux linux-firmware linux-headers grub efibootmgr networkmanager networkmanager-runit runit elogind-runit
 fstabgen -U /mnt >> /mnt/etc/fstab
