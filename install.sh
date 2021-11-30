@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 # Haven't tested this script yet !!!!!
 # have to update depdendency list
 #part1
@@ -15,7 +16,7 @@ read partition
 mkfs.ext4 $partition 
 echo "Enter boot partition: "
 read bootpartition
-mkfs.vfat -F 32 $efipartition
+mkfs.vfat -F 32 $bootpartition
 mount $partition /mnt 
 mkdir -p /mnt/boot
 mount $bootpartition /mnt/boot
@@ -39,8 +40,6 @@ echo "127.0.0.1       localhost" >> /etc/hosts
 echo "::1             localhost" >> /etc/hosts
 echo "127.0.1.1       $hostname.localdomain $hostname" >> /etc/hosts
 passwd
-echo "Enter boot partition: " 
-read efipartition
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 sed -i "s/^.*#\(%wheel\sALL=(ALL) NOPASSWD: ALL\)/\1\nDefaults \!tty_tickets/g" /mnt/etc/sudoers
