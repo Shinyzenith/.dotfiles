@@ -142,7 +142,7 @@ sudo aura -S --noconfirm --needed tokyo-night-gtk
 sudo aura -S --noconfirm --needed tokyo-night-wallpapers
 sudo aura -S --noconfirm --needed wlsunset
 sudo aura -S --noconfirm --needed foot
-sudo aura -Rns --noconfirm --needed foot-themes
+sudo pacman -Rdd --noconfirm foot-themes
 sudo aura -Aca --noconfirm rofi-lbonn-wayland-git
 sudo aura -Aca --noconfirm rivercarro-git
 sudo aura -S --noconfirm --needed mako
