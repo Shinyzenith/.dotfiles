@@ -20,6 +20,7 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 export _JAVA_AWT_WM_NONREPARENTING=1
 export XKB_DEFAULT_OPTIONS=caps:swapescape
+export XDG_CURRENT_DESKTOP=Unity
 export GTK_USE_PORTAL=0
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
@@ -33,7 +34,6 @@ timestamp=$(date +%F-%R)
 /usr/bin/pipewire 2>/tmp/pipewire-${timestamp}.log &
 /usr/bin/pipewire-pulse 2>/tmp/pipewire-pulse-${timestamp}.log &
 /usr/bin/pipewire-media-session 2>/tmp/pipewire-media-session-${timestamp}.log &
-curl "https://json.geoiplookup.io/$(curl https://ipinfo.io/ip)" > /tmp/coords
 
 if [[ -z $WAYLAND_DISPLAY && $(tty) = "/dev/tty1" ]]; then
 	exec dbus-run-session river -log-level debug > /tmp/river-${timestamp}.log 2>&1
