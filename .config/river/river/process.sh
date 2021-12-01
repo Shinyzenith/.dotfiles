@@ -1,8 +1,3 @@
-killall wlsunset
-if [[ ! -f /tmp/coords ]];then
-	curl "https://json.geoiplookup.io/$(curl https://ipinfo.io/ip)" > /tmp/coords
-fi
-wlsunset -l $(cat /tmp/coords | grep -i "latitude" | awk '{print $NF}' | cut -d',' -f1) -L $(cat /tmp/coords | grep -i "longitude" | awk '{print $NF}' | cut -d',' -f1) &
 killall swaybg
 swaybg -i /usr/share/backgrounds/wall.jpg &
 killall mako
@@ -24,3 +19,8 @@ do
   riverctl input $pad tap enabled
 done
 light -S 100%
+killall wlsunset
+if [[ ! -f /tmp/coords ]];then
+	curl "https://json.geoiplookup.io/$(curl https://ipinfo.io/ip)" > /tmp/coords
+fi
+wlsunset -l $(cat /tmp/coords | grep -i "latitude" | awk '{print $NF}' | cut -d',' -f1) -L $(cat /tmp/coords | grep -i "longitude" | awk '{print $NF}' | cut -d',' -f1) &
