@@ -1,8 +1,8 @@
 for pid in $(ps -ef | grep roll.sh | grep -v grep| tr -s ' ' | cut -d' ' -f2)
 do
-	kill $pid
+	kill $pid &
 done
-bash /usr/share/backgrounds/roll.sh
+bash /usr/share/backgrounds/roll.sh &
 killall mako
 mako &
 killall waybar
