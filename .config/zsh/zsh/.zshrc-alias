@@ -73,6 +73,7 @@ ex ()
 
 gitpush ()
 {
+	#/usr/bin/env bash
 	set -e
 	git diff
 	git add .
