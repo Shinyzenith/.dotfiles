@@ -13,7 +13,7 @@ fi
 # arch linux support
 sudo aura -S --noconfirm --needed artix-archlinux-support
 
-cd ~/.dotfiles
+cd ~/.config/.dotfiles
 sudo cp ./assets/pacman.conf /etc/pacman.conf
 sudo pacman -Syy
 
@@ -170,7 +170,7 @@ sudo pacman -Rdd --noconfirm xorg-server
 sudo aura -Oj --noconfirm
 
 xdg-user-dirs-update
-cd ~/.dotfiles
+cd ~/.config/.dotfiles
 ./config.sh
 sudo python3 -m pip install neovim
 sudo python3 -m pip insall beautifulsoup4
@@ -185,9 +185,9 @@ sudo chown $USER /usr/share/icons/default/index.theme
 sudo chown $USER /usr/share/backgrounds
 sudo echo "[Icon Theme]" > /usr/share/icons/default/index.theme
 sudo echo "Inherits=macOSBigSur" >> /usr/share/icons/default/index.theme
-sudo cp -r ~/.dotfiles/usr/share/themes/TokyoNight /usr/share/themes/
 sudo chown root /usr/share/icons/default/index.theme
 sudo gpasswd -a $USER video
 sudo gpasswd -a $USER power
 sudo gpasswd -a $USER audio
+rm -rf ~/.npm
 loginctl reboot
