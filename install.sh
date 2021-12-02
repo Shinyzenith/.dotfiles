@@ -237,7 +237,6 @@ cd ~/.dotfiles
 sudo python3 -m pip install neovim
 sudo python3 -m pip insall beautifulsoup4
 sudo npm install neovim --global
-mkdir -p ~/.vim/undodir
 mkdir -p ~/Pictures/screenshots
 mkdir -p ~/Videos/recordings
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
