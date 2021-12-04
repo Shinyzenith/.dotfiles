@@ -57,6 +57,7 @@ sudo aura -S --noconfirm --needed bluez-runit
 sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 sudo aura -S --noconfirm --needed zenity
 sudo aura -S --noconfirm --needed man-db
+# sudo aura -S --noconfirm --needed man-pages # this is for the linux programmers manual example : man 2 bind
 sudo aura -S --noconfirm --needed wmname
 sudo aura -S --noconfirm --needed polkit
 sudo aura -S --noconfirm --needed ranger
