@@ -31,6 +31,9 @@ export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="${XDG_CONFIG_HOME:-$HOME/.config}/java"
 timestamp=$(date +%F-%R)
+killall pipewire
+killall pipewire-pulse
+killall pipewire-media-session
 /usr/bin/pipewire 2>/tmp/pipewire-${timestamp}.log &
 /usr/bin/pipewire-pulse 2>/tmp/pipewire-pulse-${timestamp}.log &
 /usr/bin/pipewire-media-session 2>/tmp/pipewire-media-session-${timestamp}.log &
