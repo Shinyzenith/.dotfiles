@@ -41,6 +41,7 @@ nnoremap <C-G> <cmd>Telescope live_grep<cr>
 nmap <leader>rn <Plug>(coc-rename)
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>p "*yy
+nnoremap <leader>t :terminal<CR>
 vnoremap <leader>p "*y
 nnoremap <leader>1 1gt
 nnoremap <leader>2 2gt

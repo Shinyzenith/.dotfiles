@@ -27,6 +27,8 @@ alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/p
 alias mirrors="sudo reflector --latest 30 --number 10 --sort score --save /etc/pacman.d/mirrorlist-arch;rankmirrors /etc/pacman.d/mirrorlist| sudo tee /etc/pacman.d/mirrorlist"
 alias mv='mv -i'
 alias vim='vim -i NONE'
+alias padding="sed -i 's/^# pad\(.*\)/pad\1/g' ~/.config/foot/foot.ini"
+alias nopadding="sed -i 's/^pad\(.*\)/# pad\1/g' ~/.config/foot/foot.ini"
 # find devour alternative for wayland
 alias p='setsid -f pcmanfm .'
 alias pdw="pwd"
