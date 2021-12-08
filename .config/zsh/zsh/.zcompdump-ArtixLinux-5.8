@@ -253,6 +253,7 @@ _comps=(
 'doas' '_doas'
 'domainname' '_yp'
 'dos2unix' '_dos2unix'
+'downgrade' '_downgrade'
 'drill' '_drill'
 'dropdb' '_postgresql'
 'dropuser' '_postgresql'
@@ -422,7 +423,6 @@ _comps=(
 'gitk' '_git'
 'git-receive-pack' '_git'
 'git-shell' '_git'
-'git-subrepo' '_git-subrepo'
 'git-upload-archive' '_git'
 'git-upload-pack' '_git'
 'gjoin' '_join'
@@ -1543,7 +1543,6 @@ _postpatcomps=(
 'g++-*' '_gcc'
 'gcc-*' '_gcc'
 'gem[0-9.]#' '_gem'
-'git\' '_git-subrepo'
 'lua[0-9.-]##' '_lua'
 '(p[bgpn]m*|*top[bgpn]m)' '_pbm'
 'php[0-9.-]' '_php'
@@ -1552,7 +1551,6 @@ _postpatcomps=(
 'qemu(|-system-*)' '_qemu'
 '(ruby|[ei]rb)[0-9.]#' '_ruby'
 'shasum(|5).*' '_shasum'
-'##subrepo' '_git-subrepo'
 '(texi(2*|ndex))' '_texi'
 '(tiff*|*2tiff|pal2rgb)' '_tiff'
 '-value-,(ftp|http(|s))_proxy,-default-' '_urls'
@@ -1600,8 +1598,8 @@ bindkey '^[,' _history-complete-newer
 bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
-autoload -Uz _aura _bat _bluetoothctl _curl _exa \
-            _foot _footclient _git-subrepo _libinput _loginctl \
+autoload -Uz _aura _bat _bluetoothctl _curl _downgrade \
+            _exa _foot _footclient _libinput _loginctl \
             _mako _makoctl _mkinitcpio _mpv _pacman \
             _playerctl _pulseaudio _rg _riverctl _wl-copy \
             _wl-paste _yt-dlp _zathura _cdr _all_labels \

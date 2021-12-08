@@ -9,6 +9,10 @@
 			  "directory": "/tmp/ccls"
 			}
 		  }
-	  }
+	  },
+	  "zls" : {
+           "command": "~/.config/.dotfiles/assets/zls/zls",
+           "filetypes": ["zig"]
+       }
 	}
 }

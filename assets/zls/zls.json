@@ -1,0 +1,6 @@
+{
+    "enable_snippets": false,
+    "warn_style": false,
+    "enable_semantic_tokens": false,
+    "operator_completions": true
+}

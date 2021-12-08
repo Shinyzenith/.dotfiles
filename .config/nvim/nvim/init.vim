@@ -1,5 +1,6 @@
 syntax on
 call plug#begin('~/.config/nvim/plugged')
+Plug 'ziglang/zig.vim' " zig support
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -12,7 +13,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'chrisbra/Colorizer'
-"Plug 'arcticicestudio/nord-vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'vim-airline/vim-airline'
@@ -119,7 +119,6 @@ set cindent
 set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
-"colorscheme nord
 colorscheme tokyonight
 set background=dark
 function! IsNERDTreeOpen()        
