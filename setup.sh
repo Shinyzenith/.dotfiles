@@ -40,6 +40,7 @@ sudo aura -S --noconfirm --needed mpv
 sudo aura -S --noconfirm --needed btop
 sudo aura -S --noconfirm --needed wget
 sudo aura -Aca --noconfirm nsxiv
+sudo aura -Aca --noconfirm downgrade
 sudo aura -S --noconfirm --needed tmux
 sudo aura -S --noconfirm --needed tldr
 sudo aura -S --noconfirm --needed dkms
