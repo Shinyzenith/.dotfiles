@@ -17,6 +17,7 @@ alias killp='killprocess'
 alias kp='killprocess'
 alias l='exa -lahF --color=always --icons --sort=size --group-directories-first'
 alias less='bat'
+alias listfonts='fc-list'
 alias ls='exa -lhF --color=always --icons --sort=size --group-directories-first'
 alias lst='exa -lahFT --color=always --icons --sort=size --group-directories-first'
 alias m='mocp'
@@ -26,9 +27,9 @@ alias mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pac
 alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/pacman.d/mirrorlist-arch;rankmirrors /etc/pacman.d/mirrorlist| sudo tee /etc/pacman.d/mirrorlist"
 alias mirrors="sudo reflector --latest 30 --number 10 --sort score --save /etc/pacman.d/mirrorlist-arch;rankmirrors /etc/pacman.d/mirrorlist| sudo tee /etc/pacman.d/mirrorlist"
 alias mv='mv -i'
-alias vim='vim -i NONE'
-alias padding="sed -i 's/^# pad\(.*\)/pad\1/g' ~/.config/foot/foot.ini"
 alias nopadding="sed -i 's/^pad\(.*\)/# pad\1/g' ~/.config/foot/foot.ini"
+alias padding="sed -i 's/^# pad\(.*\)/pad\1/g' ~/.config/foot/foot.ini"
+alias vim='vim -i NONE'
 # find devour alternative for wayland
 alias p='setsid -f pcmanfm .'
 alias pdw="pwd"
@@ -39,12 +40,12 @@ alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | n
 alias rm='rm -i'
 alias udpate='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
 alias upate='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias update='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
+alias updatefonts='sudo fc-cache -fv'
 alias updqte='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
 alias updte='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
-alias updatefonts='sudo fc-cache -fv'
 alias wget="wget -c" # continue the download
-alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # required functions
 

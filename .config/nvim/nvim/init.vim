@@ -1,10 +1,10 @@
 syntax on
 call plug#begin('~/.config/nvim/plugged')
+Plug 'github/copilot.vim'
 Plug 'ziglang/zig.vim' " zig support
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'psliwka/vim-smoothie'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -71,7 +71,7 @@ set scrolloff=999
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'base16'
-let g:smoothe_enabled = 1
+" let g:smoothe_enabled = 1 " vim smoothie required
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:NERDTreeGitStatusUseNerdFonts = 1
 let g:NERDTreeGitStatusShowIgnored = 1
@@ -230,7 +230,8 @@ augroup end
 hi! Normal ctermbg=NONE guibg=NONE
 nnoremap <esc> :noh<CR>
 " enabling mouse support
-"set mouse=a
+set mouse=a
 set window title
 set title
 set ttyfast
+set guifont=JetBrains\ Mono:h15
