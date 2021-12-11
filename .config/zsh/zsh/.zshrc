@@ -5,7 +5,7 @@
 #|____/|_| |_|_|_| |_|\__, /___\___|_| |_|_|\__|_| |_| (_)____|___/_| |_|_|  \___|
 #                     |___/
 
-# export PROMPT="%F{078}%~"$'\n'" ❯ %f"
+export PROMPT="%F{078}%~"$'\n'" ❯ %f"
 autoload -U promptinit; promptinit
 autoload -U colors && colors
 export PWD=/home/$USER
@@ -39,7 +39,6 @@ plugins=(
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 [[ -f $ZDOTDIR/.zshrc-alias ]] && . $ZDOTDIR/.zshrc-alias
-[[ -f $ZDOTDIR/spaceship-prompt/spaceship.zsh ]] && . $ZDOTDIR/spaceship-prompt/spaceship.zsh
 [[ ! -f ${XDG_CACHE_HOME:-${HOME}/.cache}/neofetch-cache ]] && neofetch --config ~/.config/neofetch/blockfetch.conf > ~/.cache/neofetch-cache
 [[ ! -f ${XDG_CACHE_HOME:-${HOME}/.cache}/neofetch-large-cache ]] && neofetch > ~/.cache/neofetch-large-cache
 =cat ${XDG_CACHE_HOME:-${HOME}/.cache}/neofetch-cache
