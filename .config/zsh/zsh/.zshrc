@@ -40,4 +40,8 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 [[ -f $ZDOTDIR/.zshrc-alias ]] && . $ZDOTDIR/.zshrc-alias
 [[ -f $ZDOTDIR/spaceship-prompt/spaceship.zsh ]] && . $ZDOTDIR/spaceship-prompt/spaceship.zsh
+[[ ! -f ${XDG_CACHE_HOME:-${HOME}/.cache}/neofetch-cache ]] && neofetch --config ~/.config/neofetch/blockfetch.conf > ~/.cache/neofetch-cache
+[[ ! -f ${XDG_CACHE_HOME:-${HOME}/.cache}/neofetch-large-cache ]] && neofetch > ~/.cache/neofetch-large-cache
+=cat ${XDG_CACHE_HOME:-${HOME}/.cache}/neofetch-cache
+#=cat ${XDG_CACHE_HOME:-${HOME}/.cache}/neofetch-large-cache
 precmd(){print""}

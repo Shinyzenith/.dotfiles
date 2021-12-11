@@ -115,7 +115,7 @@ sudo aura -S --noconfirm --needed python3
 sudo aura -S --noconfirm --needed ripgrep
 sudo aura -S --noconfirm --needed python-pip
 
-#sudo aura -S --noconfirm --needed neofetch
+sudo aura -S --noconfirm --needed neofetch
 sudo aura -S --noconfirm --needed zathura-ps
 sudo aura -S --noconfirm --needed pacman-contrib
 sudo aura -S --noconfirm --needed imagemagick
