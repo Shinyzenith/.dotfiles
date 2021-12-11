@@ -30,6 +30,7 @@ export CUDA_CACHE_PATH="${XDG_CACHE_HOME:-$HOME/.cache}/nv"
 export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="${XDG_CONFIG_HOME:-$HOME/.config}/java"
+export LEIN_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/lein"
 timestamp=$(date +%F-%R)
 killall pipewire 2>/dev/null
 killall pipewire-pulse 2>/dev/null
