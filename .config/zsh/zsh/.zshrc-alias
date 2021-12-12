@@ -42,6 +42,7 @@ alias rm='rm -i'
 alias udpate='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
 alias upate='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias grub-mkconfig="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias update='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
 alias updatefonts='sudo fc-cache -fv'
 alias updqte='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
