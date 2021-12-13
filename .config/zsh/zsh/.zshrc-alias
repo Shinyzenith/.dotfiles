@@ -4,7 +4,7 @@ alias cd..='cd ..'
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq);sudo aura -Oj' #Cleanup orphaned packages
 alias cp='cp -i'
 alias cpu="ps axch -o cmd:15,%cpu --sort=-%cpu | head"
-alias df='df -h'
+alias df='duf'
 alias e='exit'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'

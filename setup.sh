@@ -34,6 +34,7 @@ sudo aura -S --noconfirm --needed pulsemixer
 sudo aura -S --noconfirm --needed scdoc
 sudo aura -S --noconfirm --needed bat
 sudo aura -S --noconfirm --needed exa
+sudo aura -S --noconfirm --needed duf
 sudo aura -S --noconfirm --needed zsh
 sudo aura -S --noconfirm --needed mpv
 #sudo aura -S --noconfirm --needed meld
