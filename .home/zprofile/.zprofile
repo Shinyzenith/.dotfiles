@@ -1,15 +1,3 @@
-if [ -d "$HOME/.config/bin" ] ;
-  then PATH="$HOME/.config/bin:$PATH"
-fi
-
-if [ -d "$HOME/.config/bin" ] ;
-  then PATH="$HOME/.config/bin:$PATH"
-fi
-
-if [ -d "$HOME/.local/bin" ] ;
-  then PATH="$HOME/.local/bin:$PATH"
-fi
-
 export MOZ_ENABLE_WAYLAND=1
 export XDG_SESSION_TYPE=wayland
 export XDG_SESSION_DESKTOP=river
@@ -31,6 +19,11 @@ export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="${XDG_CONFIG_HOME:-$HOME/.config}/java"
 export LEIN_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/lein"
+
+[[ -d "$HOME/.config/bin" ]] && PATH="$HOME/.config/bin:$PATH"
+[[ -d "$HOME/.bin" ]] && PATH="$HOME/.bin:$PATH"
+[[ -d "$HOME/.local/bin" ]] && PATH="$HOME/.local/bin:$PATH"
+
 timestamp=$(date +%F-%R)
 killall pipewire 2>/dev/null
 killall pipewire-pulse 2>/dev/null
