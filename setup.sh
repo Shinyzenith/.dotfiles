@@ -36,6 +36,8 @@ sudo ln -s /etc/runit/sv/sshd /run/runit/service
 
 xdg-user-dirs-update &
 cd ~/.config/.dotfiles
+sudo mkdir /usr/share/btop/themes
+sudo cp ./assets/tokyo.theme /usr/share/btop/themes/tokyo.theme
 ./config.sh
 sudo python3 -m pip install neovim
 sudo python3 -m pip insall beautifulsoup4
