@@ -26,9 +26,6 @@ sudo aura -S --noconfirm --needed lib32-pipewire
 sudo aura -S --noconfirm --needed lib32-pipewire-jack
 sudo aura -S --noconfirm --needed xdg-desktop-portal-wlr
 sudo aura -S --noconfirm --needed pulsemixer
-# sudo aura -S --noconfirm --needed easyeffects
-# sudo aura -S --noconfirm --needed helvum
-# sudo aura -S --noconfirm --needed carla
 
 # base package install
 sudo aura -S --noconfirm --needed scdoc
@@ -37,7 +34,6 @@ sudo aura -S --noconfirm --needed exa
 sudo aura -S --noconfirm --needed duf
 sudo aura -S --noconfirm --needed zsh
 sudo aura -S --noconfirm --needed mpv
-#sudo aura -S --noconfirm --needed meld
 sudo aura -S --noconfirm --needed btop
 sudo aura -S --noconfirm --needed wget
 sudo aura -Aca --noconfirm nsxiv
@@ -46,7 +42,7 @@ sudo aura -S --noconfirm --needed tmux
 sudo aura -S --noconfirm --needed tldr
 sudo aura -S --noconfirm --needed dkms
 sudo aura -S --noconfirm --needed gtk2
-sudo aura -S --noconfirm --needed gvfs # fs support for artix
+sudo aura -S --noconfirm --needed gvfs
 sudo aura -S --noconfirm --needed gvfs-mtp
 sudo aura -S --noconfirm --needed ntfs-3g
 sudo aura -S --noconfirm --needed unzip
@@ -59,7 +55,6 @@ sudo aura -S --noconfirm --needed bluez-runit
 sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
 sudo aura -S --noconfirm --needed zenity
 sudo aura -S --noconfirm --needed man-db
-# sudo aura -S --noconfirm --needed man-pages # this is for the linux programmers manual example : man 2 bind
 sudo aura -S --noconfirm --needed wmname
 sudo aura -S --noconfirm --needed polkit
 sudo aura -S --noconfirm --needed ranger
@@ -95,15 +90,10 @@ sudo aura -S --noconfirm --needed adobe-source-han-serif-tw-fonts
 sudo aura -S --noconfirm --needed bbswitch
 sudo aura -S --noconfirm --needed intel-ucode
 sudo aura -S --noconfirm --needed lib32-mesa
-# sudo aura -S --noconfirm --needed lib32-nvidia-utils
 sudo aura -S --noconfirm --needed lib32-vulkan-icd-loader
 sudo aura -S --noconfirm --needed lib32-vulkan-icd-loader
 sudo aura -S --noconfirm --needed lib32-vulkan-intel
 sudo aura -S --noconfirm --needed mesa
-# sudo aura -S --noconfirm --needed nvidia
-# sudo aura -S --noconfirm --needed nvidia-prime
-# sudo aura -S --noconfirm --needed nvidia-settings
-# sudo aura -S --noconfirm --needed nvidia-utils
 sudo aura -S --noconfirm --needed vulkan-icd-loader
 sudo aura -S --noconfirm --needed vulkan-icd-loader
 sudo aura -S --noconfirm --needed vulkan-intel
