@@ -59,7 +59,7 @@ riverctl map normal $mod BackSpace spawn 'wl-copy -c && printf ''|xclip -selecti
 riverctl map normal $mod+Shift f spawn 'pcmanfm'
 
 # PixelColor script
-riverctl map normal "Mod1" C spawn 'bash ~/.config/bin/pixelcolor'
+riverctl map normal $mod C spawn 'bash ~/.config/bin/pixelcolor'
 
 # Mod+Q to close the focused view
 riverctl map normal $mod Q close

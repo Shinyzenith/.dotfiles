@@ -103,18 +103,18 @@ window#waybar.hidden {
 	margin-bottom: 0px;
 	border-radius: 15px;
 	transition: none;
-	color: #2E3440;
+	color: #111318;
 	background: #EBCB8B;
 }
 
 #battery.charging, #battery.plugged {
-	color: #2E3440;
+	color: #111318;
     background-color: #A3BE8C;
 }
 
 #battery.critical:not(.charging) {
     background-color: #D8DEE9;
-    color: #2E3440;
+    color: #111318;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -137,7 +137,7 @@ window#waybar.hidden {
 	margin-bottom: 0px;
 	border-radius: 15px;
 	transition: none;
-	color: #2E3440;
+	color: #111318;
 	background: #f7768e;
 }
 #custom-clock {
@@ -175,7 +175,7 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 15px;
 	transition: none;
-	color: #2E3440;
+	color: #111318;
 	background: #60AFEE;
 }
 
