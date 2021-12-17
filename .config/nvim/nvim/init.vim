@@ -3,13 +3,10 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'github/copilot.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdtree'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'chrisbra/Colorizer'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
@@ -63,7 +60,6 @@ nmap <leader>gs :G<CR>
 nmap <leader>gc :Git commit<CR>
 "Keybind to push to github
 nmap <leader>gp :Git push<CR>
-nmap <C-n> :NERDTreeToggle<CR>
 vmap cc <Plug>NERDCommenterToggle
 nmap cc <Plug>NERDCommenterToggle
 set scrolloff=999
@@ -73,32 +69,12 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'base16'
 " let g:smoothe_enabled = 1 " vim smoothie required
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-let g:NERDTreeGitStatusUseNerdFonts = 1
-let g:NERDTreeGitStatusShowIgnored = 1
-let g:NERDTreeGitStatusShowClean = 1 
-let g:NERDTreeGitStatusWithFlags = 1
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-                \ 'Modified'  :'✹',
-                \ 'Staged'    :'✚',
-                \ 'Untracked' :'✭',
-                \ 'Renamed'   :'➜',
-                \ 'Unmerged'  :'═',
-                \ 'Deleted'   :'✖',
-                \ 'Dirty'     :'✗',
-                \ 'Ignored'   :'☒',
-                \ 'Clean'     :'✔︎',
-                \ 'Unknown'   :'?',
-                \ }
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/UltiSnips']
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-let g:prettier#quickfix_enabled = 0
-let g:prettier#quickfix_auto_focus = 0
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.yaml,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html,*.py PrettierAsync
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
@@ -122,16 +98,6 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 colorscheme tokyonight
 set background=dark
-function! IsNERDTreeOpen()        
-  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-endfunction
-function! SyncTree()
-  if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
-    NERDTreeFind
-    wincmd p
-  endif
-endfunction
-autocmd BufEnter * call SyncTree()
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   "\ 'coc-java',
@@ -140,7 +106,6 @@ let g:coc_global_extensions = [
   \ 'coc-pairs',
   \ 'coc-tsserver',
   \ 'coc-eslint', 
-  \ 'coc-prettier', 
   \ 'coc-json', 
   \ 'coc-pyright'
   \ ]
