@@ -6,7 +6,6 @@ Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'chrisbra/Colorizer'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
@@ -75,7 +74,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/UltiSnips']
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.yaml,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html,*.py PrettierAsync
+"autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.yaml,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html,*.py PrettierAsync
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 set completeopt=menuone,noselect
