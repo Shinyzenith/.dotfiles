@@ -2,6 +2,8 @@ for pid in $(ps -ef | grep roll.sh | grep -v grep| tr -s ' ' | cut -d' ' -f2)
 do
 	kill $pid &
 done
+killall wireplumber
+wireplumber & # trying this in .zprofile breaks my audio setup for some reason.
 bash /usr/share/backgrounds/roll.sh &
 killall mako
 mako &
@@ -23,7 +25,8 @@ do
 done
 light -S 100%
 killall wlsunset
-if [[ ! -f /tmp/coords ]];then
-	curl "https://json.geoiplookup.io/$(curl https://ipinfo.io/ip)" > /tmp/coords
+coords="${XDG_CACHE_HOME:-$HOME/.cache}/coords"
+if [[ ! -f $coords ]];then
+	curl "https://json.geoiplookup.io/$(curl https://ipinfo.io/ip)" > $coords
 fi
-wlsunset -l $(cat /tmp/coords | grep -i "latitude" | awk '{print $NF}' | cut -d',' -f1) -L $(cat /tmp/coords | grep -i "longitude" | awk '{print $NF}' | cut -d',' -f1) &
+wlsunset -l $(cat $coords | grep -i "latitude" | awk '{print $NF}' | cut -d',' -f1) -L $(cat $coords | grep -i "longitude" | awk '{print $NF}' | cut -d',' -f1) &
