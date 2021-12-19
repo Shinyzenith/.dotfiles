@@ -4,8 +4,9 @@ if [[ ! -f $coords ]];then
 	curl "https://json.geoiplookup.io/$(curl https://ipinfo.io/ip)" > $coords
 fi
 wlsunset -l $(cat $coords | grep -i "latitude" | awk '{print $NF}' | cut -d',' -f1) -L $(cat $coords | grep -i "longitude" | awk '{print $NF}' | cut -d',' -f1) &
-killall wireplumber
-wireplumber & # trying this in .zprofile breaks my audio setup for some reason.
+if [[ ! $(pgrep wireplumber) ]];then
+	wireplumber & # trying this in .zprofile breaks my audio setup for some reason.
+fi
 bash /usr/share/backgrounds/roll.sh &
 killall mako
 mako &
