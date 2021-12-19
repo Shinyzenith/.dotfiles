@@ -28,8 +28,8 @@ timestamp=$(date +%F-%R)
 killall pipewire 2>/dev/null
 killall pipewire-pulse 2>/dev/null
 killall wireplumber 2>/dev/null
-rm -rf /tmp/pipewire*
-rm -rf /tmp/river*
+rm -rf /tmp/pipewire* 2>/dev/null
+rm -rf /tmp/river* 2>/dev/null
 /usr/bin/pipewire 2>/tmp/pipewire-${timestamp}.log &
 /usr/bin/pipewire-pulse 2>/tmp/pipewire-pulse-${timestamp}.log &
 
