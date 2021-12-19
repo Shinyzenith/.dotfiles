@@ -29,6 +29,7 @@ alias mirrors="sudo reflector --latest 30 --number 10 --sort score --save /etc/p
 alias mv='mv -i'
 alias nopadding="sed -i 's/^pad\(.*\)/# pad\1/g' ~/.config/foot/foot.ini"
 alias padding="sed -i 's/^# pad\(.*\)/pad\1/g' ~/.config/foot/foot.ini"
+alias neofetch="=cat ~/.cache/neofetch-large-cache"
 alias vim='vim -i NONE'
 # find devour alternative for wayland
 alias p='setsid -f pcmanfm .'
