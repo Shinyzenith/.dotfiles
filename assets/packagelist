@@ -30,9 +30,6 @@ intel-ucode
 intel-ucode
 kvantum-qt5
 lib32-mesa
-lib32-pipewire
-lib32-pipewire-jack
-lib32-vulkan-icd-loader
 lib32-vulkan-icd-loader
 lib32-vulkan-intel
 light
