@@ -60,4 +60,4 @@ sudo gpasswd -a $USER video
 sudo gpasswd -a $USER power
 sudo gpasswd -a $USER audio
 rm -rf ~/.npm
-loginctl reboot
+echo "DO NOT FORGET TO GO TO chrome://flags and ENABLE webrtc pipewire"
