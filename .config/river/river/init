@@ -207,6 +207,8 @@ riverctl csd-filter-remove app-id "chromium"
 riverctl csd-filter-remove app-id "zathura"
 riverctl csd-filter-remove app-id "helvum"
 
+riverctl focus-follows-cursor normal
+
 # The scratchpad will live on an unused tag. Which tags are used depends on your
 # config, but rivers default uses the first 9 tags.
 scratch_tag=$((1 << 20 ))
