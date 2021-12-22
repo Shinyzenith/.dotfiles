@@ -102,6 +102,14 @@ rangercd () {
     fi
 }
 
+openxwaylandappasroot(){
+	if ! command -v xhost >/dev/null; then
+		echo "xhost is not installed"
+		exit 0
+	fi
+	xhost si:localuser:root
+}
+
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
   if [[ ${KEYMAP} == vicmd ]] ||
