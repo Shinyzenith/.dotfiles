@@ -105,9 +105,9 @@ rangercd () {
 openxwaylandappasroot(){
 	if ! command -v xhost >/dev/null; then
 		echo "xhost is not installed"
-		exit 0
+	else
+		xhost si:localuser:root
 	fi
-	xhost si:localuser:root
 }
 
 # Change cursor shape for different vi modes.
