@@ -19,6 +19,8 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'farmergreg/vim-lastplace'
 call plug#end()
+" vv always center the cursor vertically vv
+" set scrolloff=999
 let mapleader=" "
 nnoremap / /\v
 vnoremap / /\v
@@ -62,7 +64,6 @@ nmap <leader>gc :Git commit<CR>
 nmap <leader>gp :Git push<CR>
 vmap cc <Plug>NERDCommenterToggle
 nmap cc <Plug>NERDCommenterToggle
-set scrolloff=999
 "vvvvvvvvvvvvv set airline to have angled separators vvvvvvvvvvvv
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
