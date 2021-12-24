@@ -40,7 +40,9 @@ main(){
 	read -r choice
 	[ "$choice" -eq "$choice" ] 2>/dev/null || die "${c_red}Invalid Number Entered.${c_reset}\n"
 	[[ $(wc -l ${tmp_file} | awk '{print $1}') -lt $choice  ]] || [[ $choice -lt 0 ]] || [[ $choice -eq 0 ]] && die "${c_red}Invalid choice range.${c_reset}\n"
-	videourl=$(awk -v choice="$choice" '{if(NR==choice) print $0}' ${tmp_file}| awk '{print $NF}')
+	videourl=$(awk -v choice="$choice" '{if(NR==choice) print $0}' ${tmp_file})
+	notify-send "YouTube Script" "Playing: $(echo $videourl|sed 's/^.*--> \(.*\) youtu.be.*/\1/')"
+	videourl=$(echo $videourl|awk '{print $NF}')
 
 	setsid -f mpv "https://${videourl}" 2>/dev/null 1>&2
 	tput reset
