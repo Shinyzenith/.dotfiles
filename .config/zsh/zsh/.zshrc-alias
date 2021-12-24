@@ -78,13 +78,14 @@ ex ()
 
 gitpush ()
 {
-	set -e
-	git diff
-	git add .
-	echo "Type a commit message."
-	read input
-	git commit -m "$input"
-	git push
+	if [ -d .git ];then
+		git diff
+		git add .
+		echo "Type a commit message."
+		read input
+		git commit -m "$input"
+		git push
+	fi
 }
 
 
