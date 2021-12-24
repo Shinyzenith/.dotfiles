@@ -1,4 +1,3 @@
-#!/bin/sh
 killall wlsunset
 coords="${XDG_CACHE_HOME:-$HOME/.cache}/coords"
 if [[ ! -f $coords ]];then

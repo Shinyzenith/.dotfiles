@@ -224,5 +224,5 @@ riverctl spawn-tagmask ${all_but_scratch_tag}
 #riverctl float-filter-add "float"
 #riverctl map normal $mod T spawn 'riverctl spawn "foot --app-id \"float\" --window-size-pixels 1200x800"'
 
-$HOME/.config/river/process.sh
-$HOME/.config/river/touchpad.sh
+bash $HOME/.config/river/process.sh
+bash $HOME/.config/river/touchpad.sh
