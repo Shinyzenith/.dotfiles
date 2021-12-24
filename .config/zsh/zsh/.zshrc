@@ -39,8 +39,6 @@ plugins=(
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 [[ -f $ZDOTDIR/.zshrc-alias ]] && . $ZDOTDIR/.zshrc-alias
-[[ ! -f ${XDG_CACHE_HOME:-${HOME}/.cache}/neofetch-cache ]] && /usr/bin/neofetch --config ~/.config/neofetch/blockfetch.conf > ~/.cache/neofetch-cache && sed -i 's/sway/RiverWM/g' ~/.cache/neofetch-cache
-[[ ! -f ${XDG_CACHE_HOME:-${HOME}/.cache}/neofetch-large-cache ]] && /usr/bin/neofetch > ~/.cache/neofetch-large-cache && sed -i 's/sway/RiverWM/g' ~/.cache/neofetch-large-cache
 =cat ${XDG_CACHE_HOME:-${HOME}/.cache}/neofetch-cache
 #=cat ${XDG_CACHE_HOME:-${HOME}/.cache}/neofetch-large-cache
 precmd(){print""}

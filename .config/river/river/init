@@ -226,3 +226,5 @@ riverctl spawn-tagmask ${all_but_scratch_tag}
 
 bash $HOME/.config/river/process.sh
 bash $HOME/.config/river/touchpad.sh
+/usr/bin/neofetch --config ~/.config/neofetch/blockfetch.conf > ~/.cache/neofetch-cache && sed -i 's/sway/RiverWM/g' ~/.cache/neofetch-cache &
+/usr/bin/neofetch > ~/.cache/neofetch-large-cache && sed -i 's/sway/RiverWM/g' ~/.cache/neofetch-large-cache &
