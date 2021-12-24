@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 set -e 
 
 die() { printf "$*" 1>&2 ; exit 1; }

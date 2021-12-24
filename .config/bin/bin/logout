@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 choice=$(printf "Shutdown\nReboot" | rofi -dmenu)
 if [[ $choice == "Shutdown" ]];then
 	loginctl poweroff

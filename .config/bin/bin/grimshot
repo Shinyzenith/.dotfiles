@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/bin/sh
 
 function fullscreenshot {
     local timestamp=$(date +%m%d%H%M%S)

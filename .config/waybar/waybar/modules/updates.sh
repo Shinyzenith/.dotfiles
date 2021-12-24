@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 pkg_updates() {
 	updates=$(checkupdates | wc -l)
   if [ $updates == 0 ]; then

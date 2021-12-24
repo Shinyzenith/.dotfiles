@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 hex=$(grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:-|egrep "#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})" -o)
 
 convert -size 50x50 xc:$hex /tmp/pixelcolor.png

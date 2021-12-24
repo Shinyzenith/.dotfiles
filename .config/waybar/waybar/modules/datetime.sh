@@ -1,2 +1,2 @@
-#!/usr/bin/env bash
+#!/bin/sh
 echo "$(date '+%A,  %d/%m/%y  %r') "
