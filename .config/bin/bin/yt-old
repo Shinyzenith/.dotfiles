@@ -1,0 +1,79 @@
+#!/usr/bin/env bash
+set -e 
+
+die() { printf "$*" 1>&2 ; exit 1; }
+
+if ! command -v yt-dlp &> /dev/null; then
+  die "yt-dlp is not installed\n"
+fi
+
+if ! command -v mpv &> /dev/null; then
+  die "mpv is not installed\n"
+fi
+
+c_red="\033[1;31m"
+c_green="\033[1;32m"
+c_blue="\033[1;34m"
+c_reset="\033[0m"
+tmp_file="/tmp/yt-script"
+search_file="/tmp/yt-script-search"
+rm -rf $search_file
+
+main(){
+	tput reset
+	printf "${c_red}Search YouTube:${c_reset} "
+	read -r query
+	if [[ $query == "" ]]; then
+		die "No query term specified.\n"
+	fi
+	query="${query// /+}"
+	tput reset
+	 
+	printf "${c_red}Searching with yt-dlp.${c_reset} "
+	yt-dlp -j "ytsearch10:$query" > $tmp_file
+	tput reset
+
+	printf "${c_red}Formatting output.${c_reset} "
+	while IFS="" read -r line;do
+		uploader=$( echo $line | sed 's/.*"uploader": "\(.*\)", "uploader_id.*/\1/g')
+		title=$( echo $line | sed 's/.*"fulltitle": "\(.*\)", "epoch.*/\1/g')
+		url=$( echo $line | sed 's/.*"webpage_url": "\(.*\)", "categories.*/\1/g')
+		echo "${uploader} --> ${title} ${url}" >> $search_file
+	done < $tmp_file
+
+	tput reset
+	format_print $search_file
+	printf "\n${c_red}Enter Choice:${c_reset} "
+	read -r choice
+	[ "$choice" -eq "$choice" ] 2>/dev/null || die "${c_red}Invalid Number Entered.${c_reset}\n"
+	[[ $(wc -l ${search_file} | awk '{print $1}') -lt $choice  ]] || [[ $choice -lt 0 ]] || [[ $choice -eq 0 ]] && die "${c_red}Invalid choice range.${c_reset}\n"
+	videourl=$(awk -v choice="$choice" '{if(NR==choice) print $0}' ${search_file})
+	notify-send "YouTube Script" "Playing: $(echo $videourl|sed 's/^.*--> \(.*\) https:\/\/.*/\1/')"
+	videourl=$(echo $videourl|awk '{print $NF}')
+
+	setsid -f mpv "${videourl}" 2>/dev/null 1>&2
+	tput reset
+
+}
+
+format_print(){
+	count=1
+	while IFS="" read -r line || [ -n "$line" ];do
+		if [ $((count % 2)) -eq 0 ];then
+			printf "${c_blue}[$count]: $line\n"
+		else
+			printf "${c_green}[$count]: $line${c_reset}\n"
+		fi
+		count=$((count+1))
+	done  < $1
+}
+
+_sigterm(){
+	tput reset
+	die 
+}
+
+trap _sigterm SIGTERM
+trap _sigterm SIGINT
+
+while true;do main;done
