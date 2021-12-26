@@ -178,7 +178,7 @@ dep_ck () {
 	done
 	unset Dep
 }
-dep_ck "jq" "yt-dlp" "curl" "jq" "fzf"
+dep_ck "jq" "yt-dlp" "curl" "fzf"
 
 
 #only check for mpv if $YTFZF_PLAYER is set to it
