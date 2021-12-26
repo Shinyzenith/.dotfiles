@@ -11,6 +11,7 @@
 #3: invalid argument for opt, error with config
 
 YTFZF_VERSION="1.2.0"
+tput reset
 
 
 ############################
