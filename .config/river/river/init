@@ -199,6 +199,7 @@ riverctl set-repeat 100 300
 
 # Make certain views start floating
 riverctl float-filter-add app-id float
+riverctl float-filter-add app-id mpv-float
 riverctl float-filter-add title "popup title with spaces"
 
 # Set app-ids and titles of views which should use client side decorations
