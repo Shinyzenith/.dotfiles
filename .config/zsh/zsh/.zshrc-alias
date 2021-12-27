@@ -13,6 +13,7 @@ alias gpgexportprivkey="gpg --export-secret-keys --armor"
 alias gpgimportkey="gpg --import"
 alias gpglistkeys="gpg --list-keys --keyid-format LONG"
 alias grep='grep --color=auto'
+alias grub-mkconfig="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias killp='killprocess'
 alias kp='killprocess'
 alias l='exa -lahF --color=always --icons --sort=size --group-directories-first'
@@ -27,9 +28,9 @@ alias mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pac
 alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/pacman.d/mirrorlist-arch;rankmirrors /etc/pacman.d/mirrorlist| sudo tee /etc/pacman.d/mirrorlist"
 alias mirrors="sudo reflector --latest 30 --number 10 --sort score --save /etc/pacman.d/mirrorlist-arch;rankmirrors /etc/pacman.d/mirrorlist| sudo tee /etc/pacman.d/mirrorlist"
 alias mv='mv -i'
+alias neofetch="=cat ~/.cache/neofetch-large-cache"
 alias nopadding="sed -i 's/^pad\(.*\)/# pad\1/g' ~/.config/foot/foot.ini"
 alias padding="sed -i 's/^# pad\(.*\)/pad\1/g' ~/.config/foot/foot.ini"
-alias neofetch="=cat ~/.cache/neofetch-large-cache"
 alias vim='vim -i NONE'
 # find devour alternative for wayland
 alias p='setsid -f pcmanfm .'
@@ -42,11 +43,11 @@ alias rm='rm -i'
 alias udpate='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
 alias upate='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-alias grub-mkconfig="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias update='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
 alias updatefonts='sudo fc-cache -fv'
 alias updqte='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
 alias updte='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
+alias upload='curl -sF"file=@$(find $HOME -type f | fzf)" 0x0.st |wl-copy && notify-send "0x0.st" "File Uploaded\!"'
 alias wget="wget -c" # continue the download
 
 # required functions
