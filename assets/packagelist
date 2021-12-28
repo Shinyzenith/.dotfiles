@@ -19,6 +19,7 @@ dosfstools
 duf
 exa
 expac
+fzf
 chromium
 foot
 grim
@@ -28,6 +29,7 @@ gvfs-mtp
 imagemagick
 intel-ucode
 intel-ucode
+jq
 kvantum-qt5
 lib32-mesa
 lib32-vulkan-icd-loader
