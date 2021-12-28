@@ -2,7 +2,7 @@
 alias cat='bat'
 alias cd..='cd ..'
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq);sudo aura -Oj' #Cleanup orphaned packages
-alias cp='cp -i'
+alias cp='cpg -gi'
 alias cpu="ps axch -o cmd:15,%cpu --sort=-%cpu | head"
 alias df='duf'
 alias e='exit'
@@ -27,7 +27,7 @@ alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacma
 alias mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pacman.d/mirrorlist-arch;rankmirrors /etc/pacman.d/mirrorlist| sudo tee /etc/pacman.d/mirrorlist"
 alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/pacman.d/mirrorlist-arch;rankmirrors /etc/pacman.d/mirrorlist| sudo tee /etc/pacman.d/mirrorlist"
 alias mirrors="sudo reflector --latest 30 --number 10 --sort score --save /etc/pacman.d/mirrorlist-arch;rankmirrors /etc/pacman.d/mirrorlist| sudo tee /etc/pacman.d/mirrorlist"
-alias mv='mv -i'
+alias mv='mvg -gi'
 alias neofetch="=cat ~/.cache/neofetch-large-cache"
 alias nopadding="sed -i 's/^pad\(.*\)/# pad\1/g' ~/.config/foot/foot.ini"
 alias padding="sed -i 's/^# pad\(.*\)/pad\1/g' ~/.config/foot/foot.ini"
