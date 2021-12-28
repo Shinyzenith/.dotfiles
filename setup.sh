@@ -73,5 +73,6 @@ sudo chown root /usr/share/icons/default/index.theme
 sudo gpasswd -a $USER video
 sudo gpasswd -a $USER power
 sudo gpasswd -a $USER audio
+bash ~/.config/.dotfiles/assets/advcpmv.sh
 rm -rf ~/.npm
 echo "DO NOT FORGET TO GO TO chrome://flags and ENABLE webrtc pipewire"
