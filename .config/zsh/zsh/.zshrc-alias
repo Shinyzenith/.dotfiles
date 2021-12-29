@@ -33,6 +33,7 @@ alias padding="sed -i 's/^# pad\(.*\)/pad\1/g' ~/.config/foot/foot.ini"
 alias vim='vim -i NONE'
 # find devour alternative for wayland
 alias p='setsid -f pcmanfm .'
+alias paste='cat "$(find . -type f | fzf)" | curl -sF "sprunge=<-" http://sprunge.us|wl-copy && wl-paste'
 alias pdw="pwd"
 alias q='exit'
 alias rg="rg --sort path --no-ignore --hidden" #search content with ripgrep
