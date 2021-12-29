@@ -38,11 +38,13 @@ nnoremap <C-p> <cmd>Telescope find_files<cr>
 nnoremap <C-s> :w<CR>
 nnoremap <C-G> <cmd>Telescope live_grep<cr>
 nmap <leader>rn <Plug>(coc-rename)
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <C-b> <cmd>Telescope buffers<cr>
+nnoremap <leader>qq <cmd>bw!<CR>
 nnoremap <leader>p "*yy
 nnoremap <leader>t :terminal<CR>
-tnoremap <leader>p <C-\><C-n>
-nnoremap <C-n> :Telescope file_browser<CR>
+tnoremap <C-i> <C-\><C-n>
+tnoremap <C-b> <cmd>Telescope buffers<cr>
+nnoremap <C-n> <cmd>Telescope file_browser<CR>
 vnoremap <leader>p "*y
 nnoremap <leader>1 1gt
 nnoremap <leader>2 2gt
