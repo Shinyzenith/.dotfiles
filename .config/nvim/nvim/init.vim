@@ -44,6 +44,7 @@ nnoremap <leader>p "*yy
 nnoremap <leader>t :terminal<CR>
 tnoremap <C-i> <C-\><C-n>
 tnoremap <C-b> <cmd>Telescope buffers<cr>
+tnoremap <leader>qq <cmd>bw!<CR>
 nnoremap <C-n> <cmd>Telescope file_browser<CR>
 vnoremap <leader>p "*y
 nnoremap <leader>1 1gt
