@@ -59,6 +59,7 @@ sudo npm install neovim --global
 sudo npm install prettier --global
 mkdir -p ~/Pictures/screenshots
 mkdir -p ~/Videos/recordings
+mkdir -p ~/.local/share/vimwiki
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 nvim -c :PlugInstall -c :exit :exit
