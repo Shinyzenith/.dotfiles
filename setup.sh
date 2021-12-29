@@ -40,6 +40,7 @@ done
 
 #cleaning up orphans
 sudo pacman -Rns --noconfirm scdoc
+sudo pacman -Rns --noconfirm python-pytest
 sudo pacman -Rdd --noconfirm xorg-server
 sudo pacman -Rdd --noconfirm foot-themes
 yes | sudo pacman -S --needed wireplumber
