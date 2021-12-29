@@ -49,6 +49,7 @@ alias updqte='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
 alias updte='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
 alias upload='curl -sF"file=@$(find $HOME -type f | fzf)" 0x0.st |wl-copy && notify-send "0x0.st" "File Uploaded\!"'
 alias wget="wget -c" # continue the download
+alias webcam='mpv --profile=low-latency --no-cache --untimed $(/bin/ls /dev/video* | fzf)'
 alias yt="yt --detach"
 
 # required functions

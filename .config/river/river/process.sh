@@ -15,8 +15,6 @@ waybar &
 bash ~/.config/bin/gtktheme
 killall polkit-gnome-authentication-agent-1
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-killall nm-applet
-nm-applet --indicator &
 # Set and exec into the default layout generator, rivertile.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile &
@@ -27,3 +25,5 @@ do
   riverctl input $pad tap enabled
 done
 light -S 100%
+killall nm-applet
+nm-applet --indicator &
