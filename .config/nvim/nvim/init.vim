@@ -41,6 +41,8 @@ nmap <leader>rn <Plug>(coc-rename)
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>p "*yy
 nnoremap <leader>t :terminal<CR>
+tnoremap <leader>p <C-\><C-n>
+nnoremap <C-n> :Telescope file_browser<CR>
 vnoremap <leader>p "*y
 nnoremap <leader>1 1gt
 nnoremap <leader>2 2gt
