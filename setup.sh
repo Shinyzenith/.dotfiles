@@ -43,7 +43,7 @@ sudo pacman -Rns --noconfirm scdoc
 sudo pacman -Rns --noconfirm python-pytest
 sudo pacman -Rdd --noconfirm xorg-server
 sudo pacman -Rdd --noconfirm foot-themes
-yes | sudo pacman -S --needed wireplumber
+sudo pacman -S --needed wireplumber
 sudo aura -Oj --noconfirm
 
 sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
