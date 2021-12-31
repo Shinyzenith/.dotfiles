@@ -38,6 +38,7 @@ do
 	sudo aura -Aca --noconfirm $line
 done
 
+ln -s $(which doas) /usr/bin/sudo
 #cleaning up orphans
 doas pacman -Rns --noconfirm scdoc
 doas pacman -Rns --noconfirm python-pytest
