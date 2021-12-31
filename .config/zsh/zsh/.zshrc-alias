@@ -35,6 +35,9 @@ alias vim='vim -i NONE'
 alias p='setsid -f pcmanfm .'
 alias paste='cat "$(find . -type f | fzf)" | curl -sF "sprunge=<-" http://sprunge.us|wl-copy && wl-paste'
 alias pdw="pwd"
+alias aurupdates='paru -Qua'
+alias aurcomments='paru -Gc'
+alias pkgbuild='paru -Gp'
 alias q='exit'
 alias sudoedit='doasedit'
 alias rg="rg --sort path --no-ignore --hidden" #search content with ripgrep
