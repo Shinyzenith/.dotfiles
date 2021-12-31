@@ -3,7 +3,7 @@ set -e
 
 if ! command -v yt-dlp &> /dev/null
 then
-    echo "yt-dlp could not be found, please run sudo aura -Aca youtube-dlp-bin"
+    echo "yt-dlp could not be found, please run sudo pacman -S yt-dlp"
     exit
 fi
 

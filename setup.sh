@@ -2,14 +2,14 @@
 # sleep , poweroff, reboot and otehr integrations https://wiki.artixlinux.org/Main/Elogind
 # installing our package manager
 sudo pacman -S --noconfirm --needed git
-if ! command -v aura &> /dev/null
+if ! command -v paru &> /dev/null
 then
-	git clone https://aur.archlinux.org/aura-bin.git /tmp/aura-git-cloned
-	cd /tmp/aura-git-cloned/
+	git clone https://aur.archlinux.org/paru-bin.git /tmp/paru-bin-cloned
+	cd /tmp/paru-bin-cloned/
 	makepkg -sfci --noconfirm --needed
 fi
 # arch linux support
-sudo aura -S --noconfirm --needed artix-archlinux-support
+sudo pacman -S --noconfirm --needed artix-archlinux-support
 
 cd ~/.config/.dotfiles
 sudo cp ./assets/pacman.conf /etc/pacman.conf
@@ -35,7 +35,7 @@ done
 
 for line in $(cat ./assets/aurlist)
 do
-	sudo aura -Aca --noconfirm $line
+	paru -S --noconfirm --needed $line
 done
 
 ln -s $(which doas) /usr/bin/sudo
@@ -46,7 +46,8 @@ doas pacman -Rdd --noconfirm xorg-server
 doas pacman -Rdd --noconfirm foot-themes
 doas pacman -Rdd --noconfirm sudo
 doas pacman -S --needed wireplumber
-doas aura -Oj --noconfirm
+paru -c --noconfirm
+paru --gendb
 
 doas ln -s /etc/runit/sv/bluetoothd /run/runit/service
 doas ln -s /etc/runit/sv/sshd /run/runit/service

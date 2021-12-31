@@ -1,6 +1,6 @@
 alias cat='bat'
 alias cd..='cd ..'
-alias cleanup='doas pacman -Rns $(pacman -Qtdq);doas aura -Oj' #Cleanup orphaned packages
+alias cleanup='doas pacman -Rns $(pacman -Qtdq); paru -c' #Cleanup orphaned packages
 alias cp='cpg -gi'
 alias cpu="ps axch -o cmd:15,%cpu --sort=-%cpu | head"
 alias df='duf'
@@ -41,13 +41,13 @@ alias rg="rg --sort path --no-ignore --hidden" #search content with ripgrep
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl" #Recent Installed Packages
 alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
 alias rm='rm -i'
-alias udpate='doas aura -Syu; doas aura -Acakux --devel; doas aura -Oj'
-alias upate='doas aura -Syu; doas aura -Acakux --devel; doas aura -Oj'
+alias udpate='paru -Syu --devel;paru -c'
+alias update='paru -Syu --devel;paru -c'
+alias upate='paru -Syu --devel;paru -c'
+alias updqte='paru -Syu --devel;paru -c'
+alias updte='paru -Syu --devel;paru -c'
 alias update-grub="doas grub-mkconfig -o /boot/grub/grub.cfg"
-alias update='doas aura -Syu; doas aura -Acakux --devel; doas aura -Oj'
 alias updatefonts='doas fc-cache -fv'
-alias updqte='doas aura -Syu; doas aura -Acakux --devel; doas aura -Oj'
-alias updte='doas aura -Syu; doas aura -Acakux --devel; doas aura -Oj'
 alias upload='curl -sF"file=@$(find $HOME -type f | fzf)" 0x0.st |wl-copy && notify-send "0x0.st" "File Uploaded\!"'
 alias wget="wget -c" # continue the download
 alias webcam='mpv --profile=low-latency --no-cache --untimed $(/bin/ls /dev/video* | fzf)'
