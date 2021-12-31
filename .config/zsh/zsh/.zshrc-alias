@@ -36,6 +36,7 @@ alias p='setsid -f pcmanfm .'
 alias paste='cat "$(find . -type f | fzf)" | curl -sF "sprunge=<-" http://sprunge.us|wl-copy && wl-paste'
 alias pdw="pwd"
 alias q='exit'
+alias sudoedit='doasedit'
 alias rg="rg --sort path --no-ignore --hidden" #search content with ripgrep
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl" #Recent Installed Packages
 alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
