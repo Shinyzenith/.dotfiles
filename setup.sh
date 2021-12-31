@@ -39,17 +39,16 @@ do
 done
 
 #cleaning up orphans
-sudo pacman -Rns --noconfirm scdoc
-sudo pacman -Rns --noconfirm python-pytest
-sudo pacman -Rdd --noconfirm xorg-server
-sudo pacman -Rdd --noconfirm foot-themes
-sudo pacman -Rdd --noconfirm sudo
-doas ln -s /usr/bin/doas /usr/bin/sudo
+doas pacman -Rns --noconfirm scdoc
+doas pacman -Rns --noconfirm python-pytest
+doas pacman -Rdd --noconfirm xorg-server
+doas pacman -Rdd --noconfirm foot-themes
+doas pacman -Rdd --noconfirm sudo
 doas pacman -S --needed wireplumber
 doas aura -Oj --noconfirm
 
 doas ln -s /etc/runit/sv/bluetoothd /run/runit/service
-sudo ln -s /etc/runit/sv/sshd /run/runit/service
+doas ln -s /etc/runit/sv/sshd /run/runit/service
 
 xdg-user-dirs-update &
 cd ~/.config/.dotfiles
