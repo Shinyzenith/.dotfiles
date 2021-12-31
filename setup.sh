@@ -43,21 +43,23 @@ sudo pacman -Rns --noconfirm scdoc
 sudo pacman -Rns --noconfirm python-pytest
 sudo pacman -Rdd --noconfirm xorg-server
 sudo pacman -Rdd --noconfirm foot-themes
-sudo pacman -S --needed wireplumber
-sudo aura -Oj --noconfirm
+sudo pacman -Rdd --noconfirm sudo
+doas ln -s /usr/bin/doas /usr/bin/sudo
+doas pacman -S --needed wireplumber
+doas aura -Oj --noconfirm
 
-sudo ln -s /etc/runit/sv/bluetoothd /run/runit/service
+doas ln -s /etc/runit/sv/bluetoothd /run/runit/service
 sudo ln -s /etc/runit/sv/sshd /run/runit/service
 
 xdg-user-dirs-update &
 cd ~/.config/.dotfiles
-sudo mkdir /usr/share/btop/themes
-sudo cp ./assets/tokyo.theme /usr/share/btop/themes/tokyo.theme
+doas mkdir /usr/share/btop/themes
+doas cp ./assets/tokyo.theme /usr/share/btop/themes/tokyo.theme
 ./config.sh
-sudo python3 -m pip install neovim
-sudo python3 -m pip insall beautifulsoup4
-sudo npm install neovim --global
-sudo npm install prettier --global
+doas python3 -m pip install neovim
+doas python3 -m pip insall beautifulsoup4
+doas npm install neovim --global
+doas npm install prettier --global
 mkdir -p ~/Pictures/screenshots
 mkdir -p ~/Videos/recordings
 mkdir -p ~/.local/share/vimwiki
@@ -65,16 +67,16 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 nvim -c :PlugInstall -c :exit :exit
 nvim -c :PlugInstall -c :exit :exit
-sudo mkdir -p /usr/share/icons/default
-sudo touch /usr/share/icons/default/index.theme
-sudo chown $USER /usr/share/icons/default/index.theme
-sudo chown $USER /usr/share/backgrounds
-sudo echo "[Icon Theme]" > /usr/share/icons/default/index.theme
-sudo echo "Inherits=macOSBigSur" >> /usr/share/icons/default/index.theme
-sudo chown root /usr/share/icons/default/index.theme
-sudo gpasswd -a $USER video
-sudo gpasswd -a $USER power
-sudo gpasswd -a $USER audio
+doas mkdir -p /usr/share/icons/default
+doas touch /usr/share/icons/default/index.theme
+doas chown $USER /usr/share/icons/default/index.theme
+doas chown $USER /usr/share/backgrounds
+doas echo "[Icon Theme]" > /usr/share/icons/default/index.theme
+doas echo "Inherits=macOSBigSur" >> /usr/share/icons/default/index.theme
+doas chown root /usr/share/icons/default/index.theme
+doas gpasswd -a $USER video
+doas gpasswd -a $USER power
+doas gpasswd -a $USER audio
 #bash ~/.config/.dotfiles/assets/advcpmv.sh
 rm -rf ~/.npm
 echo "DO NOT FORGET TO GO TO chrome://flags and ENABLE webrtc pipewire"

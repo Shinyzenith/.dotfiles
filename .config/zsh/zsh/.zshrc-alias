@@ -1,6 +1,6 @@
 alias cat='bat'
 alias cd..='cd ..'
-alias cleanup='sudo pacman -Rns $(pacman -Qtdq);sudo aura -Oj' #Cleanup orphaned packages
+alias cleanup='doas pacman -Rns $(pacman -Qtdq);doas aura -Oj' #Cleanup orphaned packages
 alias cp='cpg -gi'
 alias cpu="ps axch -o cmd:15,%cpu --sort=-%cpu | head"
 alias df='duf'
@@ -12,7 +12,7 @@ alias gpgexportprivkey="gpg --export-secret-keys --armor"
 alias gpgimportkey="gpg --import"
 alias gpglistkeys="gpg --list-keys --keyid-format LONG"
 alias grep='grep --color=auto'
-alias grub-mkconfig="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias grub-mkconfig="doas grub-mkconfig -o /boot/grub/grub.cfg"
 alias killp='killprocess'
 alias kp='killprocess'
 alias l='exa -lahF --color=always --icons --sort=size --group-directories-first'
@@ -22,10 +22,10 @@ alias ls='exa -lhF --color=always --icons --sort=size --group-directories-first'
 alias lst='exa -lahFT --color=always --icons --sort=size --group-directories-first'
 alias m='mocp'
 alias mem="ps axch -o cmd:15,%mem --sort=-%mem | head"
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist-arch;rankmirrors /etc/pacman.d/mirrorlist| sudo tee /etc/pacman.d/mirrorlist" 
-alias mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pacman.d/mirrorlist-arch;rankmirrors /etc/pacman.d/mirrorlist| sudo tee /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/pacman.d/mirrorlist-arch;rankmirrors /etc/pacman.d/mirrorlist| sudo tee /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 30 --number 10 --sort score --save /etc/pacman.d/mirrorlist-arch;rankmirrors /etc/pacman.d/mirrorlist| sudo tee /etc/pacman.d/mirrorlist"
+alias mirror="doas reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist-arch;rankmirrors /etc/pacman.d/mirrorlist| doas tee /etc/pacman.d/mirrorlist" 
+alias mirrora="doas reflector --latest 30 --number 10 --sort age --save /etc/pacman.d/mirrorlist-arch;rankmirrors /etc/pacman.d/mirrorlist| doas tee /etc/pacman.d/mirrorlist"
+alias mirrord="doas reflector --latest 30 --number 10 --sort delay --save /etc/pacman.d/mirrorlist-arch;rankmirrors /etc/pacman.d/mirrorlist| doas tee /etc/pacman.d/mirrorlist"
+alias mirrors="doas reflector --latest 30 --number 10 --sort score --save /etc/pacman.d/mirrorlist-arch;rankmirrors /etc/pacman.d/mirrorlist| doas tee /etc/pacman.d/mirrorlist"
 alias mv='mvg -gi'
 alias neofetch="=cat ~/.cache/neofetch-large-cache"
 alias nopadding="sed -i 's/^pad\(.*\)/# pad\1/g' ~/.config/foot/foot.ini"
@@ -40,13 +40,13 @@ alias rg="rg --sort path --no-ignore --hidden" #search content with ripgrep
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl" #Recent Installed Packages
 alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
 alias rm='rm -i'
-alias udpate='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
-alias upate='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
-alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-alias update='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
-alias updatefonts='sudo fc-cache -fv'
-alias updqte='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
-alias updte='sudo aura -Syu; sudo aura -Acakux --devel; sudo aura -Oj'
+alias udpate='doas aura -Syu; doas aura -Acakux --devel; doas aura -Oj'
+alias upate='doas aura -Syu; doas aura -Acakux --devel; doas aura -Oj'
+alias update-grub="doas grub-mkconfig -o /boot/grub/grub.cfg"
+alias update='doas aura -Syu; doas aura -Acakux --devel; doas aura -Oj'
+alias updatefonts='doas fc-cache -fv'
+alias updqte='doas aura -Syu; doas aura -Acakux --devel; doas aura -Oj'
+alias updte='doas aura -Syu; doas aura -Acakux --devel; doas aura -Oj'
 alias upload='curl -sF"file=@$(find $HOME -type f | fzf)" 0x0.st |wl-copy && notify-send "0x0.st" "File Uploaded\!"'
 alias wget="wget -c" # continue the download
 alias webcam='mpv --profile=low-latency --no-cache --untimed $(/bin/ls /dev/video* | fzf)'
