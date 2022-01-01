@@ -82,4 +82,5 @@ doas gpasswd -a $USER power
 doas gpasswd -a $USER audio
 #bash ~/.config/.dotfiles/assets/advcpmv.sh
 rm -rf ~/.npm
+chsh --shell $(which zsh) $USER
 echo "DO NOT FORGET TO GO TO chrome://flags and ENABLE webrtc pipewire"
