@@ -38,7 +38,6 @@ do
 	paru -S --noconfirm --needed $line
 done
 
-ln -s $(which doas) /usr/bin/doas
 #cleaning up orphans
 doas pacman -Rns --noconfirm scdoc
 doas pacman -Rns --noconfirm python-pytest
