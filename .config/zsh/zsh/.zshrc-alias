@@ -87,9 +87,9 @@ gitpush ()
 {
 	if [ -d .git ];then
 		git diff
-		git add .
 		echo "Type a commit message."
 		read input
+		git add .
 		git commit -m "$input"
 		git push
 	fi
