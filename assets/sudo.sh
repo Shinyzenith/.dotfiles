@@ -6,4 +6,4 @@ pacman -Rdd sudo --noconfirm
 echo "permit nopass :wheel" | tee /etc/doas.conf
 chown -c root:root /etc/doas.conf
 chmod -c 0400 /etc/doas.conf
-ln -s $(which doas) /usr/bin/doas
+ln -s $(which doas) /usr/bin/sudo
