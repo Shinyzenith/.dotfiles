@@ -10,6 +10,7 @@ then
 fi
 # arch linux support
 doas pacman -S --noconfirm --needed artix-archlinux-support
+doas pacman-key --populate archlinux
 
 cd ~/.config/.dotfiles
 doas cp ./assets/pacman.conf /etc/pacman.conf
