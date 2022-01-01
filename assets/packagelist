@@ -20,7 +20,6 @@ exa
 expac
 fzf
 chromium
-foot
 grim
 gtk2
 gvfs
@@ -86,7 +85,6 @@ vulkan-intel
 wget
 wl-clipboard
 wlroots
-wlsunset
 wmname
 xarchiver
 xclip
