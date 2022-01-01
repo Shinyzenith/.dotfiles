@@ -36,7 +36,10 @@ done
 
 for line in $(cat ./assets/aurlist)
 do
-	paru -S --noconfirm --needed $line
+	if [[ $(pacman -Qs $line) == "" ]]
+	then
+		paru -S --noconfirm --needed $line
+	fi
 done
 
 #cleaning up orphans
