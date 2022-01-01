@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # sleep , poweroff, reboot and otehr integrations https://wiki.artixlinux.org/Main/Elogind
 # installing our package manager
-sudo pacman -S --noconfirm --needed git
+doas pacman -S --noconfirm --needed git
 if ! command -v paru &> /dev/null
 then
 	git clone https://aur.archlinux.org/paru-bin.git /tmp/paru-bin-cloned
@@ -9,28 +9,28 @@ then
 	makepkg -sfci --noconfirm --needed
 fi
 # arch linux support
-sudo pacman -S --noconfirm --needed artix-archlinux-support
+doas pacman -S --noconfirm --needed artix-archlinux-support
 
 cd ~/.config/.dotfiles
-sudo cp ./assets/pacman.conf /etc/pacman.conf
-sudo pacman -Syy
+doas cp ./assets/pacman.conf /etc/pacman.conf
+doas pacman -Syy
 
 
 # makepkg.conf optimization
 numberofcores=$(grep -c ^processor /proc/cpuinfo)
 if [ $numberofcores -gt 1 ]
 then
-        sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j'$(($numberofcores+1))'"/g' /etc/makepkg.conf;
-        sudo sed -i 's/COMPRESSXZ=(xz -c -z -)/COMPRESSXZ=(xz -c -z - --threads=0)/g' /etc/makepkg.conf
-        sudo sed -i 's/COMPRESSZST=(zstd -c -z -q -)/COMPRESSZST=(zstd -c -z -q - --threads=0)/g' /etc/makepkg.conf
-        sudo sed -i "s/PKGEXT='.pkg.tar.xz'/PKGEXT='.pkg.tar.zst'/g" /etc/makepkg.conf
+        doas sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j'$(($numberofcores+1))'"/g' /etc/makepkg.conf;
+        doas sed -i 's/COMPRESSXZ=(xz -c -z -)/COMPRESSXZ=(xz -c -z - --threads=0)/g' /etc/makepkg.conf
+        doas sed -i 's/COMPRESSZST=(zstd -c -z -q -)/COMPRESSZST=(zstd -c -z -q - --threads=0)/g' /etc/makepkg.conf
+        doas sed -i "s/PKGEXT='.pkg.tar.xz'/PKGEXT='.pkg.tar.zst'/g" /etc/makepkg.conf
 else
         echo "makepkg.conf not changed."
 fi
 
 for line in $(cat ./assets/packagelist)
 do
-	sudo pacman -S --noconfirm --needed $line
+	doas pacman -S --noconfirm --needed $line
 done
 
 for line in $(cat ./assets/aurlist)
@@ -38,13 +38,12 @@ do
 	paru -S --noconfirm --needed $line
 done
 
-ln -s $(which doas) /usr/bin/sudo
+ln -s $(which doas) /usr/bin/doas
 #cleaning up orphans
 doas pacman -Rns --noconfirm scdoc
 doas pacman -Rns --noconfirm python-pytest
 doas pacman -Rdd --noconfirm xorg-server
 doas pacman -Rdd --noconfirm foot-themes
-doas pacman -Rdd --noconfirm sudo
 doas pacman -S --needed wireplumber
 paru -c --noconfirm
 paru --gendb
