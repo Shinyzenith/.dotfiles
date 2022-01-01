@@ -11,7 +11,6 @@ blueberry
 bluez
 bluez-runit
 bluez-utils
-brave
 btop
 discord-canary
 dkms
@@ -99,7 +98,6 @@ yt-dlp
 zathura
 zathura-pdf-mupdf
 zathura-ps
-zenity
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
