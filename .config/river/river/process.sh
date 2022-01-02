@@ -24,6 +24,6 @@ do
   riverctl input $pad events enabled
   riverctl input $pad tap enabled
 done
-light -S 100%
+light -S $(light -G)
 killall nm-applet
 nm-applet --indicator &
