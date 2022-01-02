@@ -63,8 +63,6 @@ doas python3 -m pip install neovim
 doas python3 -m pip insall beautifulsoup4
 doas npm install neovim --global
 doas npm install prettier --global
-doas npm install yarn --global
-doas yarn global add webtorrent-cli
 mkdir -p ~/Pictures/screenshots
 mkdir -p ~/Videos/recordings
 mkdir -p ~/.local/share/vimwiki
