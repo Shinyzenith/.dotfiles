@@ -2,9 +2,9 @@
 pkg_updates() {
   updates=$(checkupdates | wc -l)
   if [ $updates == 1 ]; then
-    echo -n " 1 Update"
+    echo -n " 1 Update "
   elif [ $updates -ne 0 ];then
-    echo -n " $updates Updates"
+    echo -n " $updates Updates "
   fi
 
   aurupdates=$(paru -Qua | wc -l)
