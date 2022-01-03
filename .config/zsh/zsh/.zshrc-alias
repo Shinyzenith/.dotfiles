@@ -168,7 +168,7 @@ bindkey -s '^o' 'rangercd\n'
 bindkey -s '^p' 'gitpush\n'
 bindkey '^R' history-incremental-search-backward
 bindkey '^E' edit-command-line
-bindkey -s '^l' 'tput reset\n'
+bindkey -s '^l' 'clear\n'
 #bindkey '^k' up-history
 #bindkey '^j' down-history
 bindkey -v 
