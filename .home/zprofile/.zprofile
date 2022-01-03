@@ -1,3 +1,5 @@
+export XDG_DATA_HOME=${HOME}/.local/share
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export MOZ_ENABLE_WAYLAND=1
 export XDG_SESSION_TYPE=wayland
 export XDG_SESSION_DESKTOP=river
