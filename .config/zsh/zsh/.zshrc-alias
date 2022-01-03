@@ -166,6 +166,7 @@ bindkey -v '^?' backward-delete-char
 bindkey -s '^o' 'rangercd\n'
 bindkey -s '^p' 'gitpush\n'
 bindkey '^R' history-incremental-search-backward
+bindkey '^E' edit-command-line
 #bindkey '^k' up-history
 #bindkey '^j' down-history
 bindkey -v 
