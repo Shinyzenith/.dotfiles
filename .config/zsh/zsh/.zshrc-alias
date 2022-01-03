@@ -53,7 +53,7 @@ alias update-grub="doas grub-mkconfig -o /boot/grub/grub.cfg"
 alias updatefonts='doas fc-cache -fv'
 alias upload='curl -sF"file=@$(find $HOME -type f | fzf)" 0x0.st |wl-copy && notify-send "0x0.st" "File Uploaded\!"'
 alias wget="wget -c" # continue the download
-alias webcam='mpv --profile=low-latency --no-cache --untimed $(/bin/ls /dev/video* | fzf)'
+alias webcam='setsid -f mpv --profile=low-latency --no-cache --untimed $(/bin/ls /dev/video* | fzf)'
 alias yt="yt --detach"
 
 # required functions
