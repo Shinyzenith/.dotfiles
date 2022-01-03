@@ -26,6 +26,7 @@ let mapleader=" "
 nnoremap / /\v
 vnoremap / /\v
 autocmd BufWritePost *.tex silent! !pdflatex %
+autocmd BufWritePost *.rs !make
 "make a compile script for groff documents and complie on save
 autocmd BufWritePost *.ms silent! !./compile.sh
 autocmd BufWritePost config.h !sudo make clean install
@@ -42,7 +43,8 @@ nnoremap <C-b> <cmd>Telescope buffers<cr>
 nnoremap <leader>qq <cmd>bw!<CR>
 nnoremap <leader>p "*yy
 nnoremap <leader>t :terminal<CR>
-tnoremap <C-i> <C-\><C-n>
+tnoremap <C-h> <C-\><C-n>
+tnoremap <C-l> <C-\><C-n>
 tnoremap <C-b> <cmd>Telescope buffers<cr>
 tnoremap <leader>qq <cmd>bw!<CR>
 nnoremap <C-n> <cmd>Telescope file_browser<CR>
