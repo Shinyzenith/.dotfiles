@@ -1,6 +1,7 @@
 alias cat='bat'
 alias cd..='cd ..'
 alias cleanup='doas pacman -Rns $(pacman -Qtdq); paru -c' #Cleanup orphaned packages
+alias clear='tput reset'
 alias cp='cpg -gi'
 alias cpu="ps axch -o cmd:15,%cpu --sort=-%cpu | head"
 alias df='duf'
@@ -167,6 +168,7 @@ bindkey -s '^o' 'rangercd\n'
 bindkey -s '^p' 'gitpush\n'
 bindkey '^R' history-incremental-search-backward
 bindkey '^E' edit-command-line
+bindkey -s '^l' 'tput reset\n'
 #bindkey '^k' up-history
 #bindkey '^j' down-history
 bindkey -v 
