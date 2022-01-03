@@ -26,7 +26,7 @@ let mapleader=" "
 nnoremap / /\v
 vnoremap / /\v
 autocmd BufWritePost *.tex silent! !pdflatex %
-autocmd BufWritePost *.rs !make
+autocmd BufWritePost *.rs !make check
 "make a compile script for groff documents and complie on save
 autocmd BufWritePost *.ms silent! !./compile.sh
 autocmd BufWritePost config.h !sudo make clean install
