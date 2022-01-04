@@ -53,7 +53,7 @@ riverctl map normal Control m spawn "/home/$USER/.config/bin/mansplain"
 # Screenshot
 riverctl map normal None Print spawn 'IMG=~/Pictures/screenshots/$(date | sed "s/\s/-/g" | sed "s/--/-/g").png&&grim -g "$(slurp)" $IMG && cat $IMG | wl-copy && notify-send "Screenshot has been saved and copied to your clipboard" -a "grim" -u critical -t 2000'
 riverctl map normal $mod Print spawn 'IMG=~/Pictures/screenshots/$(date | sed "s/\s/-/g" | sed "s/--/-/g").png&&grim $IMG && cat $IMG | wl-copy && notify-send "Screenshot has been saved and copied to your clipboard" -a "grim" -u critical -t 2000'
-riverctl map normal $mod+Shift Print spawn 'bash $HOME/.config/bin/grimshot'
+riverctl map normal $mod+Shift Print spawn 'bash $HOME/.config/bin/grimshot area'
 
 # Clear clipboard
 riverctl map normal $mod BackSpace spawn 'wl-copy -c && printf ''|xclip -selection c'
