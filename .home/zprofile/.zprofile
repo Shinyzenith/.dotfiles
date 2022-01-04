@@ -26,15 +26,15 @@ export LEIN_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/lein"
 [[ -d "$HOME/.bin" ]] && PATH="$HOME/.bin:$PATH"
 [[ -d "$HOME/.local/bin" ]] && PATH="$HOME/.local/bin:$PATH"
 
-timestamp=$(date +%F-%R)
-killall pipewire 2>/dev/null
-killall pipewire-pulse 2>/dev/null
-killall wireplumber 2>/dev/null
-rm -rf /tmp/pipewire* 2>/dev/null
-rm -rf /tmp/river* 2>/dev/null
-/usr/bin/pipewire 2>/tmp/pipewire-${timestamp}.log &
-/usr/bin/pipewire-pulse 2>/tmp/pipewire-pulse-${timestamp}.log &
 
 if [[ -z $WAYLAND_DISPLAY && $(tty) = "/dev/tty1" ]]; then
+	timestamp=$(date +%F-%R)
+	killall pipewire 2>/dev/null
+	killall pipewire-pulse 2>/dev/null
+	killall wireplumber 2>/dev/null
+	rm -rf /tmp/pipewire* 2>/dev/null
+	rm -rf /tmp/river* 2>/dev/null
+	/usr/bin/pipewire 2>/tmp/pipewire-${timestamp}.log &
+	/usr/bin/pipewire-pulse 2>/tmp/pipewire-pulse-${timestamp}.log &
 	exec dbus-run-session river -log-level debug > /tmp/river-${timestamp}.log 2>&1
 fi
