@@ -65,13 +65,15 @@
         "interval": 120,
         "return-type": "string",
         "exec": "~/.config/waybar/modules/updates.sh",
-        "tooltip": false
+        "tooltip": false,
+		"on-click":"foot -e paru -Syyu"
     },
     "custom/downloads": {
         "interval": 600,
         "return-type": "string",
         "exec": "~/.config/waybar/modules/downloads.py",
-        "tooltip": false
+        "tooltip": false,
+		"on-click":"xdg-open https://github.com/xelphlinux/xelph-iso"
     },
     "custom/clock": {
         "interval": 1,
