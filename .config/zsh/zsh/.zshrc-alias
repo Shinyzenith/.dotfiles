@@ -5,7 +5,9 @@ alias clear='tput reset'
 alias cp='cpg -gi'
 alias cpu="ps axch -o cmd:15,%cpu --sort=-%cpu | head"
 alias df='duf'
+alias decrypt="gpg --no-symkey-cache"
 alias e='exit'
+alias encrypt="gpg -c --no-symkey-cache --cipher-algo AES256"
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias g='gotop'
