@@ -46,7 +46,7 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl" #R
 alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
 alias rm='rm -i'
 alias randomwallpaper='~/.config/river/wallpaper.sh >/dev/null 2>&1'
-alias update='paru -Syu --devel;paru -c'
+alias update='paru -Syyu --devel;paru -c'
 alias udpate='update'
 alias upate='update'
 alias updqte='update'
