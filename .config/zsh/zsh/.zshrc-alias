@@ -45,11 +45,12 @@ alias rg="rg --sort path --no-ignore --hidden" #search content with ripgrep
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl" #Recent Installed Packages
 alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
 alias rm='rm -i'
-alias udpate='paru -Syu --devel;paru -c'
+alias randomwallpaper='~/.config/river/wallpaper.sh >/dev/null 2>&1'
 alias update='paru -Syu --devel;paru -c'
-alias upate='paru -Syu --devel;paru -c'
-alias updqte='paru -Syu --devel;paru -c'
-alias updte='paru -Syu --devel;paru -c'
+alias udpate='update'
+alias upate='update'
+alias updqte='update'
+alias updte='update'
 alias update-grub="doas grub-mkconfig -o /boot/grub/grub.cfg"
 alias updatefonts='doas fc-cache -fv'
 alias upload='curl -sF"file=@$(find $HOME -type f | fzf)" 0x0.st |wl-copy && notify-send "0x0.st" "File Uploaded\!"'

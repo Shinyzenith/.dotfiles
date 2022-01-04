@@ -1,5 +1,5 @@
-killall swaybg
-swaybg -i $(find /usr/share/backgrounds -type f| shuf | head -n 1) &
+#!/usr/bin/env bash
+bash ~/.config/river/wallpaper.sh
 killall wlsunset
 coords="${XDG_CACHE_HOME:-$HOME/.cache}/coords"
 if [[ ! -f $coords ]];then
