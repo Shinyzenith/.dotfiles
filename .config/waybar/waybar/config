@@ -39,7 +39,8 @@
 	"backlight": {
 		"tooltip": false,
 		"format": "盛 {}%",
-		"interval":1
+		"interval":1,
+		"on-click":"bash ~/.config/river/wallpaper.sh"
 	},
     "battery": {
         "states": {
