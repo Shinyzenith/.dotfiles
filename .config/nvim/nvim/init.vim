@@ -18,7 +18,6 @@ Plug 'nvim-lua/plenary.nvim' " needed for telescope
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'farmergreg/vim-lastplace'
-Plug 'vimwiki/vimwiki'
 call plug#end()
 " vv always center the cursor vertically vv
 " set scrolloff=999
@@ -77,7 +76,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'base16'
 let g:airline#extensions#wordcount#enabled = 1
 let g:airline#extensions#wordcount#filetypes ='\vnotes|help|markdown|rst|org|text|asciidoc|tex|mail'
-let g:vimwiki_list = [{'path': '~/.local/share/vimwiki'}]
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
