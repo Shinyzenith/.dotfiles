@@ -28,5 +28,5 @@ do
   # riverctl input $pad natural-scroll enabled
 done
 light -S $(light -G)
-killall nm-applet
-nm-applet --indicator &
+#killall nm-applet
+#nm-applet --indicator &
