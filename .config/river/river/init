@@ -17,11 +17,11 @@ riverctl map normal $mod G spawn "foot -e gotop"
 # Open Btop
 riverctl map normal $mod+Shift B spawn "foot -e btop"
 
-# Open browser of choice, chromium
-riverctl map normal $mod W spawn "chromium"
+# Open browser of choice, brave
+riverctl map normal $mod W spawn "brave"
 
-# Open browser of choice in incognito mode, chromium
-riverctl map normal $mod+Shift W spawn "chromium --incognito"
+# Open browser of choice in incognito mode, brave
+riverctl map normal $mod+Shift W spawn "brave --incognito"
 
 # Toggle waybar
 riverctl map normal $mod B spawn "killall -SIGUSR1 waybar"
@@ -204,7 +204,6 @@ riverctl float-filter-add title "popup title with spaces"
 
 # Set app-ids and titles of views which should use client side decorations
 riverctl csd-filter-add app-id "gedit"
-riverctl csd-filter-remove app-id "chromium"
 riverctl csd-filter-remove app-id "zathura"
 riverctl csd-filter-remove app-id "helvum"
 
